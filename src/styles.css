@@ -1,0 +1,12 @@
+body {
+  cursor: url('src/medios/cursor.png'), auto;
+}
+/* Oculta el cursor predeterminado */
+* {
+    cursor: none !important;
+  }
+  
+  /* Opcional: Mantén cursor estándar en inputs de texto */
+  input, textarea {
+    cursor: auto !important;
+  }
