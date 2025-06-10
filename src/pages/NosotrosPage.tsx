@@ -1,5 +1,10 @@
 import { motion } from 'framer-motion';
 import { BookOpen, Users, Award, Target, Heart, Zap } from 'lucide-react';
+import DirectorGeneral from '../medios/team/director general.png';
+import DirectorAcademico from '../medios/team/director académico.png';
+import DirectoraAdministrativa from '../medios/team/directora administrativa.png';
+
+
 
 const NosotrosPage: React.FC = () => {
   // Animaciones
@@ -39,10 +44,9 @@ const NosotrosPage: React.FC = () => {
   ];
 
   const team = [
-    { name: "Katherine Pérez", role: "CEO & Fundadora", photo: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" },
-    { name: "José Raza", role: "Director General", photo: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg" },
-    { name: "Marisela Zelada", role: "Directora Académica", photo: "https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg" },
-    { name: "Diego Minaya", role: "Director Administrativo", photo: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" }
+    { name: "José Raza", role: "Director General", photo: DirectorGeneral },
+    { name: "Marisela Zelada", role: "Directora Académica", photo: DirectorAcademico  },
+    { name: "Diego Minaya", role: "Director Administrativo", photo: DirectoraAdministrativa }
   ];
 
   return (

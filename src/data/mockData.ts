@@ -1,14 +1,48 @@
 import Comercio from './../medios/comercioexterior.png';
 import Auxiliarti from './../medios/auxiliarti.png';
 import Contable from './../medios/asistcontable.png';
-// import { EventProps } from '../types/EventProps';
+import AsistenteAdministrativa from './../medios/cursos/Asistente Administrativa.png';
+import AsistenteContable from './../medios/cursos/Asistente Contable y Financiero.png';
+import AsistenteLogistica from './../medios/cursos/Asistente de Logística.png';
+import AsistenteRRHH from './../medios/cursos/Asistente de Recursos Humanos.png';
+import AuxiliarTI from './../medios/cursos/Auxiliar de TI.png';
+import CajeroComercial from './../medios/cursos/Cajero comercial y financiero.png';
+import ComercioInternacional from './../medios/cursos/Comercio Internacional.png';
+import Comunicacionasertiva from './../medios/cursos/Comunicación asertiva y escucha activa.png';
+import DiplomadoCiberseguridad from './../medios/cursos/Diplomado en Ciberseguridad.png';
+import DiplomadoGestionAmbiental from './../medios/cursos/Diplomado en Gestión Ambiental.png';
+import DiplomadoGestiondeCalidad from './../medios/cursos/Diplomado en Gestión de la Calidad.png';
+import DiplomadoGestiondeProyectos from './../medios/cursos/Diplomado en gestión de Proyectos.png';
+import DiplomadoGestionInmobiliaria from './../medios/cursos/Diplomado en Gestión Inmobiliaria.png';
+import DiplomadoGestionPublica from './../medios/cursos/Diplomado en Gestión Pública.png';
+import DiplomadoEnSST from './../medios/cursos/Diplomado en SST.png';
+import Gestiondetiempo from './../medios/cursos/Gestión del tiempo.png';
+import Ingles from './../medios/cursos/Inglés para el trabajo.png';
+import InteligenciaEmocional from './../medios/cursos/Inteligencia Emocional.png';
+import Liderazgo from './../medios/cursos/Liderazgo personal.png';
+import Manejodeestres from './../medios/cursos/Manejo del estrés.png';
+import Marcapersonal from './../medios/cursos/Marca personal.png';
+import PensamientoCritico from './../medios/cursos/Pensamiento Crítico.png';
+import Trabajoenequipo from './../medios/cursos/Trabajo en Equipo.png';
+
+
+
+
+
+
+
+
+
+
+
+
 export const courses = [
   {
     id: '1',
     title: 'Inteligencia Emocional para el Éxito Profesional',
     description: 'Desarrolla la capacidad de identificar, comprender y gestionar las emociones propias y ajenas para fortalecer relaciones interpersonales y el desempeño profesional.',
     price: 30.00,
-    image: Contable,
+    image: InteligenciaEmocional,
     duration: '90 minutos',
     students: 1500,
     benefits: [
@@ -23,7 +57,7 @@ export const courses = [
     title: 'Comunicación asertiva y Escucha activa',
     description: 'Potencia la capacidad de expresar ideas y necesidades con claridad y respeto, promoviendo una comunicación efectiva y empática.',
     price: 25.00,
-    image: Comercio,
+    image: Comunicacionasertiva,
     duration: '75 minutos',
     students: 1000,
     modality: 'Virtual' as const,
@@ -35,7 +69,7 @@ export const courses = [
     title: 'Liderazgo Personal y Autogestión',
     description: 'Desarrolla habilidades de liderazgo desde la autorresponsabilidad, la disciplina y la toma de decisiones estratégicas',
     price: 50.00,
-    image: Auxiliarti,
+    image: Liderazgo,
     duration: '90 minutos',
     students: 3500,
     modality: 'Virtual' as const,
@@ -47,7 +81,7 @@ export const courses = [
     title: 'Gestión del Tiempo y Productividad Personal',
     description: 'Incorpora herramientas y técnicas para una mejor organización de tareas y prioridades.',
     price: 35.00,
-    image: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: Gestiondetiempo,
     duration: '70 minutos',
     students: 1700,
     modality: 'Virtual' as const,
@@ -59,7 +93,7 @@ export const courses = [
     title: 'Manejo del Estrés y Bienestar Emocional',
     description: 'Aprende a identificar factores estresantes y aplicar estrategias para el autocuidado emocional y físico.',
     price: 50.00,
-    image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: Manejodeestres,
     duration: '80 minutos',
     students: 1200,
     modality: 'Virtual' as const,
@@ -71,7 +105,7 @@ export const courses = [
     title: 'Pensamiento Crítico y Solución de Problemas',
     description: 'Fortalece la capacidad de análisis, razonamiento lógico y toma de decisiones fundamentadas.',
     price: 50.00,
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: PensamientoCritico,
     duration: '90 minutos',
     students: 2700,
     modality: 'Virtual' as const,
@@ -83,7 +117,7 @@ export const courses = [
     title: 'Marca Personal y Presencia Profesional',
     description: 'Construye una identidad profesional sólida y coherente con los objetivos personales y laborales.',
     price: 33.00,
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: Marcapersonal,
     duration: '75 minutos',
     students: 3500,
     modality: 'Virtual' as const,
@@ -95,7 +129,7 @@ export const courses = [
     title: 'Trabajo en Equipo y Colaboración Efectiva',
     description: 'Mejorar la capacidad de integrarse y contribuir activamente en equipos diversos y multidisciplinarios..',
     price: 50.00,
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: Trabajoenequipo,
     duration: '90 minutos',
     students: 1700,
     modality: 'Virtual' as const,
@@ -106,7 +140,7 @@ export const courses = [
     id: '9',
     title: 'Comercio Internacional',
     description: 'Gestiona oportunidades de negocios en el comercio exterior y conecta empresas con nuevos mercados alrededor del mundo…',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: ComercioInternacional,
     duration: '6 meses',
   benefits: [
     'Certificación internacional',
@@ -119,7 +153,7 @@ export const courses = [
     id: '10',
     title: 'Auxiliar TI',
     description: 'Aprende a brindar soporte básico de sistemas, atención técnica, manejo de bases de datos simples, gestión de hardware y software…',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: AuxiliarTI,
     duration: '6 meses',
     level: '' as const,
     category: 'Formacion Laboral' as const
@@ -128,7 +162,7 @@ export const courses = [
     id: '11',
     title: 'Asistente de Recursos Humanos',
     description: 'Gestiona los procesos de reclutamiento, selección, inducción, gestión de planillas y clima organizacional. Incluye fundamentos legales laborales…',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: AsistenteRRHH,
     duration: '4 meses',
     level: '' as const,
     category: 'Formacion Laboral' as const
@@ -137,7 +171,7 @@ export const courses = [
     id: '12',
     title: 'Asistente administrativo con herramientas digitales',
     description: 'Desempéñate eficientemente en áreas administrativas, dominando herramientas como Excel, Google Workspace, técnicas de archivo, redacción, atención al cliente…',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: AsistenteAdministrativa,
     duration: '4 meses',
     level: '' as const,
     category: 'Formacion Laboral' as const
@@ -146,7 +180,7 @@ export const courses = [
     id: '13',
     title: 'Asistente de Contable',
     description: 'Brinda soporte en registros contables, libros electrónicos, PDT, conciliaciones bancarias, análisis de costos y preparación de reportes…',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: AsistenteContable,
     duration: '6 meses',
     level: '' as const,
     category: 'Formacion Laboral' as const
@@ -155,7 +189,7 @@ export const courses = [
     id: '14',
     title: 'Auxiliar en logística y almacén',
     description: 'Brinda apoyo en procesos logísticos, control de inventarios, almacenamiento, guías de remisión y manejo de software de gestión…',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: AsistenteLogistica,
     duration: '4 meses',
     level: '' as const,
     category: 'Formacion Laboral' as const
@@ -164,7 +198,7 @@ export const courses = [
     id: '15',
     title: 'Cajero Comercial y Financiero',
     description: 'Maneja operaciones de caja, atención al cliente, terminales POS y procesos financieros básicos. Ideal para insertarse rápidamente en el mundo laboral del comercio y las finanzas.',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: CajeroComercial,
     duration: '4 meses',
     level: '' as const,
     category: 'Formacion Laboral' as const
@@ -173,7 +207,7 @@ export const courses = [
     id: '16',
     title: 'Inglés para el trabajo y la comunicación Profesional',
     description: 'Domina expresiones, vocabulario y estructuras clave para comunicarte eficazmente en entornos laborales...',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: Ingles,
     duration: '6 meses',
     level: '' as const,
     category: 'Formacion Laboral' as const
@@ -200,7 +234,7 @@ export const courses = [
     id: '19',
     title: 'Diplomado en Gestión Pública',
     description: 'Brinda herramientas clave para mejorar la administración pública y formular políticas públicas efectivas. Incluye planificación, presupuesto por resultados y control gubernamental bajo enfoques modernos de gestión estatal.',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: DiplomadoGestionPublica,
     duration: '6 meses',
     level: '' as const,
     category: 'Diplomados' as const
@@ -209,7 +243,7 @@ export const courses = [
     id: '20',
     title: 'Diplomado en Gestión Ambiental para Proyectos de Construcción',
     description: 'Este diplomado capacita a los profesionales en la identificación, evaluación y mitigación de impactos ambientales generados por proyectos de construcción. Se enfoca en la normativa ambiental vigente en Perú, elaboración de instrumentos de gestión ambiental (IGAs), planes de manejo ambiental, control de residuos y sostenibilidad en obras civiles. ',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image:  DiplomadoGestionAmbiental,
     duration: '5 meses',
     level: '' as const,
     category: 'Diplomados' as const
@@ -218,7 +252,7 @@ export const courses = [
     id: '21',
     title: 'Diplomado en Gestión Inmobiliaria y Comercialización de Bienes Raíces ',
     description: 'Capacita para desempeñarse en el sector inmobiliario con conocimientos en contratos, tasaciones, marketing inmobiliario, atención al cliente y normativas urbanísticas.',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: DiplomadoGestionInmobiliaria,
     duration: '4 meses',
     level: '' as const,
     category: 'Diplomados' as const
@@ -227,7 +261,7 @@ export const courses = [
     id: '22',
     title: 'Diplomado en Gestión de Proyectos de Construcción',
     description: 'Brinda herramientas para planificar, ejecutar y controlar proyectos de construcción bajo los estándares del PMI. Incluye cronogramas, control de avances, gestión de costos y manejo de riesgos.',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: DiplomadoGestiondeProyectos,
     duration: '6 meses',
     level: '' as const,
     category: 'Diplomados' as const
@@ -236,7 +270,7 @@ export const courses = [
     id: '23',
     title: 'Diplomado en Ciberseguridad y Gestión de la Seguridad de la Información',
     description: 'Este diplomado está diseñado para formar profesionales capaces de proteger los activos digitales de una organización mediante estrategias y herramientas de ciberseguridad. Se abordan conceptos clave como gestión de riesgos, normativas internacionales (ISO 27001, NIST), análisis de vulnerabilidades, gestión de incidentes, seguridad en redes, criptografía y ciberinteligencia.',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: DiplomadoCiberseguridad,
     duration: '5 meses',
     level: '' as const,
     category: 'Diplomados' as const
@@ -245,7 +279,7 @@ export const courses = [
     id: '24',
     title: 'Diplomado en Gestión de la Calidad y Buenas Prácticas de Manufactura (BPM)',
     description: 'Este diplomado capacita a los profesionales en la identificación, evaluación y mitigación de impactos ambientales generados por proyectos de construcción. Se enfoca en la normativa ambiental vigente en Perú, elaboración de instrumentos de gestión ambiental (IGAs), planes de manejo ambiental, control de residuos y sostenibilidad en obras civiles. ',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: DiplomadoGestiondeCalidad,
     duration: '5 meses',
     level: '' as const,
     category: 'Diplomados' as const
