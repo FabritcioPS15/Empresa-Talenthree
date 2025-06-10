@@ -1,6 +1,4 @@
-import Comercio from './../medios/comercioexterior.png';
-import Auxiliarti from './../medios/auxiliarti.png';
-import Contable from './../medios/asistcontable.png';
+
 import AsistenteAdministrativa from './../medios/cursos/Asistente Administrativa.png';
 import AsistenteContable from './../medios/cursos/Asistente Contable y Financiero.png';
 import AsistenteLogistica from './../medios/cursos/Asistente de Logística.png';

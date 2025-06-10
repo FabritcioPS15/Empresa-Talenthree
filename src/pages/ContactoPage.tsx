@@ -191,21 +191,21 @@ const ContactoPage: React.FC = () => {
                   className="mt-8 p-6 bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 rounded-2xl relative z-10"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <Clock className="text-primary-600 dark:text-primary-400" size={24} />
-                    <h3 className="text-lg font-semibold">Horarios de Atención</h3>
+                    <Clock className="text-white dark:text-primary-400" size={30} />
+                    <h3 className="text-white font-semibold">Horarios de Atención</h3>
                   </div>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-gray-600 dark:text-gray-400">Lunes - Viernes:</span>
-                      <span className="font-medium">8:00 AM - 6:00 PM</span>
+                      <span className="text-white dark:text-white">Lunes - Viernes:</span>
+                      <span className="text-white dark:text-gray-400 font-medium">8:00 AM - 6:00 PM</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600 dark:text-gray-400">Sábados:</span>
-                      <span className="font-medium">9:00 AM - 2:00 PM</span>
+                      <span className="text-white dark:text-white">Sábados:</span>
+                      <span className="text-white dark:text-gray-400 font-medium">9:00 AM - 2:00 PM</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600 dark:text-gray-400">Domingos:</span>
-                      <span className="font-medium text-red-500">Cerrado</span>
+                      <span className="text-white dark:text-white">Domingos:</span>
+                      <span className="text-red-500 dark:text-red-500 font-medium ">Cerrado</span>
                     </div>
                   </div>
                 </motion.div>
@@ -527,7 +527,7 @@ const contactInfo = [
     }
   },
   {
-    icon: <Mail className="text-white\" size={24} />,
+    icon: <Mail className="text-white" size={24} />,
     title: 'Correo Electrónico',
     content: 'informes@talenthree.com\nsoporte@talenthree.com',
     action: {
