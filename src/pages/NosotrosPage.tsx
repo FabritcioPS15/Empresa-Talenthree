@@ -3,8 +3,8 @@ import { BookOpen, Users, Award, Target, Heart, Zap } from 'lucide-react';
 import DirectorGeneral from '../medios/team/director general.png';
 import DirectorAcademico from '../medios/team/director académico.png';
 import DirectoraAdministrativa from '../medios/team/directora administrativa.png';
-import Misión from '../medios/team/Mision.jpeg';
-import Visión from '../medios/team/Visión.jpeg';
+import MisionImage from '../medios/team/Mision.jpeg';
+import VisionImage from '../medios/team/Vision.jpeg';
 
 
 
@@ -160,7 +160,7 @@ const NosotrosPage: React.FC = () => {
       </motion.div>
       <motion.div variants={itemVariants}>
         <img 
-          src="src/medios/team/Mision.jpeg"
+  src={MisionImage}  // Usa la variable importada
           alt="Equipo trabajando" 
           className="rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
         />
@@ -183,7 +183,7 @@ const NosotrosPage: React.FC = () => {
       </motion.div>
       <motion.div variants={itemVariants} className="order-2 md:order-1">
         <img 
-          src="src/medios/team/Vision.jpeg"
+  src={VisionImage}  // Usa la variable importada
           alt="Estudiantes colaborando" 
           className="rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
         />
