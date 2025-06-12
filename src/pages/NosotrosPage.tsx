@@ -3,6 +3,8 @@ import { BookOpen, Users, Award, Target, Heart, Zap } from 'lucide-react';
 import DirectorGeneral from '../medios/team/director general.png';
 import DirectorAcademico from '../medios/team/director académico.png';
 import DirectoraAdministrativa from '../medios/team/directora administrativa.png';
+import Misión from '../medios/team/Mision.jpeg';
+import Visión from '../medios/team/Visión.jpeg';
 
 
 
@@ -158,7 +160,7 @@ const NosotrosPage: React.FC = () => {
       </motion.div>
       <motion.div variants={itemVariants}>
         <img 
-          src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" 
+          src="src/medios/team/Mision.jpeg"
           alt="Equipo trabajando" 
           className="rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
         />
@@ -181,7 +183,7 @@ const NosotrosPage: React.FC = () => {
       </motion.div>
       <motion.div variants={itemVariants} className="order-2 md:order-1">
         <img 
-          src="https://images.pexels.com/photos/8869369/pexels-photo-8869369.jpeg" 
+          src="src/medios/team/Vision.jpeg"
           alt="Estudiantes colaborando" 
           className="rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
         />
