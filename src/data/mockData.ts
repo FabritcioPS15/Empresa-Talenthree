@@ -6,7 +6,7 @@ import AsistenteRRHH from './../medios/cursos/Asistente de Recursos Humanos.png'
 import AuxiliarTI from './../medios/cursos/Auxiliar de TI.png';
 import CajeroComercial from './../medios/cursos/Cajero comercial y financiero.png';
 import ComercioInternacional from './../medios/cursos/Comercio Internacional.png';
-import Comunicacionasertiva from './../medios/cursos/Comunicación asertiva y escucha activa.png';
+import Comunicacionasertiva from './../medios/cursos/ComunicacionAsertiva.jpeg';
 import DiplomadoCiberseguridad from './../medios/cursos/Diplomado en Ciberseguridad.png';
 import DiplomadoGestionAmbiental from './../medios/cursos/Diplomado en Gestión Ambiental.png';
 import DiplomadoGestiondeCalidad from './../medios/cursos/Diplomado en Gestión de la Calidad.png';
@@ -14,14 +14,19 @@ import DiplomadoGestiondeProyectos from './../medios/cursos/Diplomado en gestió
 import DiplomadoGestionInmobiliaria from './../medios/cursos/Diplomado en Gestión Inmobiliaria.png';
 import DiplomadoGestionPublica from './../medios/cursos/Diplomado en Gestión Pública.png';
 import DiplomadoEnSST from './../medios/cursos/Diplomado en SST.png';
-import Gestiondetiempo from './../medios/cursos/Gestión del tiempo.png';
+import Gestiondetiempo from './../medios/cursos/Gestiondetiempo.jpeg';
 import Ingles from './../medios/cursos/Inglés para el trabajo.png';
 import InteligenciaEmocional from './../medios/cursos/Inteligencia Emocional.png';
-import Liderazgo from './../medios/cursos/Liderazgo personal.png';
-import Manejodeestres from './../medios/cursos/Manejo del estrés.png';
-import Marcapersonal from './../medios/cursos/Marca personal.png';
-import PensamientoCritico from './../medios/cursos/Pensamiento Crítico.png';
-import Trabajoenequipo from './../medios/cursos/Trabajo en Equipo.png';
+import Liderazgo from './../medios/cursos/LiderazgoPersonal.jpeg';
+import Manejodeestres from './../medios/cursos/Manejodeestres.jpeg';
+import Marcapersonal from './../medios/cursos/MarcaPersonal.jpeg';
+import PensamientoCritico from './../medios/cursos/PensamientoCritico.jpeg';
+import Trabajoenequipo from './../medios/cursos/Trabajoenequipo.jpeg';
+import DesarrolloOrganizacional from './../medios/Asesoria/Asesoría y Consultoría - Desarrollo Organizacional.png';
+import GestiónEmpresarial from './../medios/Asesoria/Asesoría y Consultoría - Gestión Empresarial.png';
+import GestiónPública from './../medios/Asesoria/Asesoría y Consultoría - Gestión Pública.png';
+import PsicologíaIntegral from './../medios/Asesoria/Asesoría y Consultoría - Psicología Integral.png';
+
 
 
 
@@ -331,10 +336,10 @@ export const events = [
 export const instructors = [
   {
     id: '1',
-    name: 'María Rodríguez',
-    specialty: 'Desarrollo Frontend',
+    name: 'Asesoría y Consultoría - Desarrollo Organizacional',
+    specialty: 'Asesoría y Consultoría',	
     bio: 'Ingeniera de software con más de 8 años de experiencia en desarrollo frontend. Especialista en React y arquitecturas modernas de UI.',
-    image: 'https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: DesarrolloOrganizacional,
     courses: 5,
     students: 3200,
     rating: 4.8,
@@ -346,10 +351,10 @@ export const instructors = [
   },
   {
     id: '2',
-    name: 'Carlos López',
-    specialty: 'Desarrollo Backend',
+    name: 'Asesoría y Consultoría - Gestión Empresarial',
+    specialty: 'Asesoría y Consultoría',
     bio: 'Arquitecto de software con enfoque en sistemas distribuidos y microservicios. Más de 10 años de experiencia en Node.js y Java.',
-    image: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: GestiónEmpresarial,
     courses: 7,
     students: 4800,
     rating: 4.6,
@@ -360,10 +365,10 @@ export const instructors = [
   },
   {
     id: '3',
-    name: 'Ana Martínez',
-    specialty: 'Desarrollo Mobile',
+    name: 'Gestión Pública',
+    specialty: 'Asesoría y Consultoría',
     bio: 'Desarrolladora mobile con experiencia en React Native, Swift y Kotlin. Ha trabajado en aplicaciones de alta escala para empresas Fortune 500.',
-    image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: GestiónPública,
     courses: 4,
     students: 2700,
     rating: 4.9,
@@ -374,10 +379,10 @@ export const instructors = [
   },
   {
     id: '4',
-    name: 'Roberto Sánchez',
+    name: 'Asesoría y Consultoría - Psicología Integral',
     specialty: 'Ciencia de Datos',
     bio: 'PhD en Inteligencia Artificial con experiencia en investigación. Especialista en Python para análisis de datos y machine learning.',
-    image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: PsicologíaIntegral,
     courses: 6,
     students: 5100,
     rating: 4.7,
