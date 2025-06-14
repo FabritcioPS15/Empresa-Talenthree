@@ -14,6 +14,8 @@ import DiplomadoGestiondeProyectos from './../medios/cursos/Diplomado en gestió
 import DiplomadoGestionInmobiliaria from './../medios/cursos/Diplomado en Gestión Inmobiliaria.png';
 import DiplomadoGestionPublica from './../medios/cursos/Diplomado en Gestión Pública.png';
 import DiplomadoEnSST from './../medios/cursos/Diplomado en SST.png';
+import DiplomadoEnGTHEstrategico from './../medios/cursos/Diplomado en GTH Estratégico.png';
+
 import Gestiondetiempo from './../medios/cursos/Gestiondetiempo.jpeg';
 import Ingles from './../medios/cursos/Inglés para el trabajo.png';
 import InteligenciaEmocional from './../medios/cursos/Inteligencia Emocional.png';
@@ -181,7 +183,7 @@ export const courses = [
   },
   {
     id: '13',
-    title: 'Asistente de Contable',
+    title: 'Asistente Contable',
     description: 'Brinda soporte en registros contables, libros electrónicos, PDT, conciliaciones bancarias, análisis de costos y preparación de reportes…',
     image: AsistenteContable,
     duration: '6 meses',
@@ -219,7 +221,7 @@ export const courses = [
     id: '17',
     title: 'Diplomado en Gestión del Talento Humano Estratégico',
     description: 'Desarrolla habilidades para planificar, atraer, desarrollar y retener talento alineado a los objetivos estratégicos de la organización. Incorpora temas como cultura organizacional, liderazgo, evaluación del desempeño, gestión por competencias y transformación digital del área de RR.HH.',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: DiplomadoEnGTHEstrategico,
     duration: '5 meses',
     level: '' as const,
     category: 'Diplomados' as const
@@ -228,7 +230,7 @@ export const courses = [
     id: '18',
     title: 'Diplomado en Seguridad y Salud en el Trabajo',
     description: 'Formas especialistas en implementación de sistemas de gestión de SST. Incluye identificación de peligros, evaluación de riesgos, cultura preventiva, auditorías internas y cumplimiento legal según la normativa peruana.',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: DiplomadoEnSST,
     duration: '5 meses',
     level: '' as const,
     category: 'Diplomados' as const
@@ -336,7 +338,7 @@ export const events = [
 export const instructors = [
   {
     id: '1',
-    name: 'Asesoría y Consultoría - Desarrollo Organizacional',
+    name: 'Desarrollo Organizacional',
     specialty: 'Asesoría y Consultoría',	
     bio: 'Ingeniera de software con más de 8 años de experiencia en desarrollo frontend. Especialista en React y arquitecturas modernas de UI.',
     image: DesarrolloOrganizacional,
@@ -351,7 +353,7 @@ export const instructors = [
   },
   {
     id: '2',
-    name: 'Asesoría y Consultoría - Gestión Empresarial',
+    name: 'Gestión Empresarial',
     specialty: 'Asesoría y Consultoría',
     bio: 'Arquitecto de software con enfoque en sistemas distribuidos y microservicios. Más de 10 años de experiencia en Node.js y Java.',
     image: GestiónEmpresarial,
@@ -379,8 +381,22 @@ export const instructors = [
   },
   {
     id: '4',
-    name: 'Asesoría y Consultoría - Psicología Integral',
-    specialty: 'Ciencia de Datos',
+    name: 'Psicología Integral',
+    specialty: 'Asesoría y Consultoría',
+    bio: 'PhD en Inteligencia Artificial con experiencia en investigación. Especialista en Python para análisis de datos y machine learning.',
+    image: PsicologíaIntegral,
+    courses: 6,
+    students: 5100,
+    rating: 4.7,
+    social: {
+      linkedin: 'https://linkedin.com',
+      twitter: 'https://twitter.com'
+    }
+  },
+    {
+    id: '5',
+    name: 'Couching',
+    specialty: 'Asesoría y Consultoría',
     bio: 'PhD en Inteligencia Artificial con experiencia en investigación. Especialista en Python para análisis de datos y machine learning.',
     image: PsicologíaIntegral,
     courses: 6,

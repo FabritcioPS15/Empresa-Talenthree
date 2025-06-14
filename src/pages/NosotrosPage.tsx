@@ -47,8 +47,8 @@ const NosotrosPage: React.FC = () => {
 
   const team = [
     { name: "José Raza", role: "Director General", photo: DirectorGeneral },
-    { name: "Juliana Lescano", role: "Directora Académica", photo: DirectoraAdministrativa },
-    { name: "Sandro Wendorf", role: "Director Administrativo", photo: DirectorAcademico }
+    { name: "Juliana Lescano", role: "Directora Administrativa", photo: DirectoraAdministrativa },
+    { name: "Sandro Wendorf", role: "Director Académico", photo: DirectorAcademico }
   ];
 
   return (

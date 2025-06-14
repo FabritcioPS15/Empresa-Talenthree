@@ -27,11 +27,12 @@ const InstructorCard: React.FC<InstructorCardProps> = ({ instructor }) => {
   return (
     <div className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-soft-lg transition-transform duration-300 hover:-translate-y-2">
       <div className="relative pb-2/3">
-        <img 
-          src={instructor.image} 
-          alt={instructor.name} 
-          className="w-full h-52 object-cover object-center"
-        />
+<img 
+  src={instructor.image} 
+  alt={instructor.name} 
+  className="w-full h-64 md:h-80 object-cover object-center"
+/>
+
       </div>
       
       <div className="p-5 text-center">
