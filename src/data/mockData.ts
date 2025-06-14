@@ -15,7 +15,6 @@ import DiplomadoGestionInmobiliaria from './../medios/cursos/Diplomado en Gesti�
 import DiplomadoGestionPublica from './../medios/cursos/Diplomado en Gestión Pública.png';
 import DiplomadoEnSST from './../medios/cursos/Diplomado en SST.png';
 import DiplomadoEnGTHEstrategico from './../medios/cursos/Diplomado en GTH Estratégico.png';
-
 import Gestiondetiempo from './../medios/cursos/Gestiondetiempo.jpeg';
 import Ingles from './../medios/cursos/Inglés para el trabajo.png';
 import InteligenciaEmocional from './../medios/cursos/Inteligencia Emocional.png';
@@ -28,16 +27,7 @@ import DesarrolloOrganizacional from './../medios/Asesoria/Asesoría y Consultor
 import GestiónEmpresarial from './../medios/Asesoria/Asesoría y Consultoría - Gestión Empresarial.png';
 import GestiónPública from './../medios/Asesoria/Asesoría y Consultoría - Gestión Pública.png';
 import PsicologíaIntegral from './../medios/Asesoria/Asesoría y Consultoría - Psicología Integral.png';
-
-
-
-
-
-
-
-
-
-
+import Coaching from './../medios/Asesoria/Coaching.jpeg';
 
 
 
@@ -395,10 +385,10 @@ export const instructors = [
   },
     {
     id: '5',
-    name: 'Couching',
+    name: 'Coaching',
     specialty: 'Asesoría y Consultoría',
     bio: 'PhD en Inteligencia Artificial con experiencia en investigación. Especialista en Python para análisis de datos y machine learning.',
-    image: PsicologíaIntegral,
+    image: Coaching,
     courses: 6,
     students: 5100,
     rating: 4.7,
