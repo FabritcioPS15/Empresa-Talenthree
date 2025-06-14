@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, BookOpen, Briefcase, Users, Globe, Clock, MessageCircle, Star, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, BookOpen, Briefcase, Users, Globe, Clock, Star, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
+import { FaWhatsapp } from "react-icons/fa";
+import { TiMessages } from "react-icons/ti";
 
 // Animaciones
 const containerVariants = {
@@ -97,7 +99,7 @@ const ContactoPage: React.FC = () => {
             className="inline-block mb-6"
           >
             <div className="p-4 bg-white/10 backdrop-blur-sm rounded-full">
-              <MessageCircle size={48} className="text-white" />
+              <TiMessages size={48} className="text-white" />
             </div>
           </motion.div>
 
@@ -410,7 +412,7 @@ const ContactoPage: React.FC = () => {
             className="text-center mb-16"
           >
             <div className="inline-block bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900/20 dark:to-secondary-900/20 p-6 rounded-3xl mb-8">
-              <MapPin size={48} className="text-primary-600 dark:text-primary-400" />
+              <MapPin size={48} className="text-white dark:text-primary-400" />
             </div>
             <h2 className="text-4xl font-bold mb-6">Visítanos</h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
@@ -503,7 +505,7 @@ const ContactoPage: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-xl text-lg font-semibold shadow-lg transition-all duration-300"
               >
-                <MessageCircle size={20} />
+                <FaWhatsapp size={24} />
                 WhatsApp
               </motion.a>
             </div>
@@ -547,22 +549,22 @@ const contactInfo = [
 
 const faqItems = [
   {
-    icon: <BookOpen className="text-primary-600 dark:text-primary-400\" size={24} />,
+    icon: <BookOpen className="text-white dark:text-primary-400" size={24} />,
     question: '¿Cómo accedo a mis cursos?',
     answer: 'Todos los cursos están disponibles inmediatamente después de la inscripción en tu área personal. Recibirás un correo con las instrucciones de acceso y podrás comenzar de inmediato.'
   },
   {
-    icon: <Briefcase className="text-primary-600 dark:text-primary-400" size={24} />,
+    icon: <Briefcase className="text-white dark:text-primary-400" size={24} />,
     question: '¿Ofrecen certificados?',
     answer: 'Sí, todos nuestros cursos incluyen certificado digital válido internacionalmente que puedes descargar al completar el 100% del programa y aprobar las evaluaciones.'
   },
   {
-    icon: <Users className="text-primary-600 dark:text-primary-400\" size={24} />,
+    icon: <Users className="text-white dark:text-primary-400" size={24} />,
     question: '¿Tienen programas empresariales?',
     answer: 'Ofrecemos planes corporativos con descuentos especiales para equipos de 5+ personas, capacitación in-house y soluciones personalizadas. Contáctanos para una cotización.'
   },
   {
-    icon: <Globe className="text-primary-600 dark:text-primary-400" size={24} />,
+    icon: <Globe className="text-white dark:text-primary-400" size={24} />,
     question: '¿Disponible en otros países?',
     answer: 'Nuestra plataforma está disponible globalmente con soporte en español. Ofrecemos horarios flexibles para diferentes zonas horarias y métodos de pago internacionales.'
   }
