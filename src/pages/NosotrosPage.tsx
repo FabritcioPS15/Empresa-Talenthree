@@ -2,11 +2,9 @@ import { motion } from 'framer-motion';
 import { BookOpen, Users, Award, Target, Heart, Zap } from 'lucide-react';
 import DirectorGeneral from '../medios/team/director general.png';
 import DirectorAcademico from '../medios/team/director académico.png';
-import DirectoraAdministrativa from '../medios/team/directora administrativa.png';
+import DirectoraProyectos from '../medios/team/Directora de Proyectos.jpeg';
 import MisionImage from '../medios/team/Mision.jpeg';
 import VisionImage from '../medios/team/Vision.jpeg';
-
-
 
 const NosotrosPage: React.FC = () => {
   // Animaciones
@@ -47,7 +45,7 @@ const NosotrosPage: React.FC = () => {
 
   const team = [
     { name: "José Raza", role: "Director General", photo: DirectorGeneral },
-    { name: "Juliana Lescano", role: "Directora Administrativa", photo: DirectoraAdministrativa },
+    { name: "Angélica Bazán", role: "Directora de Proyectos y Alianzas Estratégicas", photo: DirectoraProyectos },
     { name: "Sandro Wendorf", role: "Director Académico", photo: DirectorAcademico }
   ];
 
@@ -295,7 +293,7 @@ const NosotrosPage: React.FC = () => {
                 <img 
                   src={member.photo} 
                   alt={member.name} 
-                  className="w-full h-64 object-cover"
+                  className="w-full h-80 object-cover"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-1 dark:text-white">{member.name}</h3>
