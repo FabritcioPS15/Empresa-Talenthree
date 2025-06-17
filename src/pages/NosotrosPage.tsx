@@ -49,7 +49,7 @@ const NosotrosPage: React.FC = () => {
     { name: "José Raza", role: "Director General", photo: DirectorGeneral },
     { name: "Angélica Bazán", role: "Directora de Administración", photo: Directoradeadministracion },
     { name: "Sandro Wendorf", role: "Director Académico", photo: DirectorAcademico },
-    { name: "Arian Anticona", role: "Directora de Proyectos y Alianzas Estratégicas", photo: DirectoradeProyectos }
+    { name: "Arian Anticona", role: "Directora de Proyectos y Convenios", photo: DirectoradeProyectos }
 
   ];
 

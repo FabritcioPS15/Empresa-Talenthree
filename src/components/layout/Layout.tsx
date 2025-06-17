@@ -81,7 +81,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         >
           <div className="relative">
             <a
-              href="https://wa.me/51958077828?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios"
+              href="https://wa.me/51960810996?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center bg-[#25D366] text-white p-3 rounded-full shadow-xl transition-all duration-300 hover:bg-purple-700" // COLOR MORADO AL HOVER

@@ -28,6 +28,7 @@ import GestiónEmpresarial from './../medios/Asesoria/Asesoría y Consultoría -
 import GestiónPública from './../medios/Asesoria/Asesoría y Consultoría - Gestión Pública.png';
 import PsicologíaIntegral from './../medios/Asesoria/Asesoría y Consultoría - Psicología Integral.png';
 import Coaching from './../medios/Asesoria/Coaching Profesional.jpeg';
+import Outsourcing from './../medios/Asesoria/Outsourcing.jpeg';
 
 
 
@@ -352,7 +353,7 @@ export const instructors = [
   {
     id: '3',
     name: 'Gestión Pública',
-    specialty: 'Asesoría y Consultoría',
+    specialty: 'Asesoría',
     image: GestiónPública,
     social: {
       twitter: 'https://twitter.com',
@@ -362,7 +363,7 @@ export const instructors = [
   {
     id: '4',
     name: 'Psicología Integral',
-    specialty: 'Asesoría y Consultoría',
+    specialty: 'Consultoría',
     image: PsicologíaIntegral,
     social: {
       linkedin: 'https://linkedin.com',
@@ -372,8 +373,18 @@ export const instructors = [
     {
     id: '5',
     name: 'Coaching',
-    specialty: 'Asesoría y Consultoría',
+    specialty: 'Asesoría',
     image: Coaching,
+    social: {
+      linkedin: 'https://linkedin.com',
+      twitter: 'https://twitter.com'
+    }
+  },
+      {
+    id: '6',
+    name: 'Outsourcing en RR.HH. y Contabilidad',
+    specialty: 'Asesoría y Consultoría',
+    image: Outsourcing,
     social: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com'

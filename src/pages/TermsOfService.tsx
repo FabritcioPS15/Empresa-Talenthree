@@ -101,7 +101,7 @@ const TermsOfService: React.FC = () => {
             </p>
             <div className="bg-purple-50 p-4 rounded-lg">
               <p>Email: legal@talenthree.com</p>
-              <p>Teléfono: (+51) 919746504</p>
+              <p>Teléfono: (+51) 960810996</p>
               <p>Dirección: Av. Simón Bolívar 460, 401. Pueblo Libre</p>
             </div>
           </section>
