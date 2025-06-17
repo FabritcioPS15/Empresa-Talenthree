@@ -382,8 +382,8 @@ export const instructors = [
   },
       {
     id: '6',
-    name: 'Outsourcing en RR.HH. y Contabilidad',
-    specialty: 'Asesoría y Consultoría',
+    name: 'Recursos Humanos y Contabilidad',
+    specialty: 'Outsourcing',
     image: Outsourcing,
     social: {
       linkedin: 'https://linkedin.com',
