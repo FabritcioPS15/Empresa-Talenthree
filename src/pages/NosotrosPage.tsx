@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { BookOpen, Users, Award, Target, Heart, Zap } from 'lucide-react';
 import DirectorGeneral from '../medios/team/director general.png';
-import DirectorAcademico from '../medios/team/director académico.png';
+import DirectorAcademico from '../medios/team/Nilton Zelada.jpeg';
 import Directoradeadministracion from '../medios/team/directora de administracion.jpeg';
 import DirectoradeProyectos from '../medios/team/Directoradeproyectos.jpeg';
 
@@ -48,7 +48,7 @@ const NosotrosPage: React.FC = () => {
   const team = [
     { name: "José Raza", role: "Director General", photo: DirectorGeneral },
     { name: "Angélica Bazán", role: "Directora de Administración", photo: Directoradeadministracion },
-    { name: "Sandro Wendorf", role: "Director Académico", photo: DirectorAcademico },
+    { name: "Nilton Zelada", role: "Director Académico", photo: DirectorAcademico },
     { name: "Arian Anticona", role: "Directora de Proyectos y Convenios", photo: DirectoradeProyectos }
 
   ];
