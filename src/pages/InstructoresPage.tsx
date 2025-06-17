@@ -28,8 +28,15 @@ const InstructoresPage: React.FC = () => {
   const specialties = [...new Set(instructors.map(instructor => instructor.specialty))];
 
   const filteredInstructors = instructors.filter(instructor => {
-    const matchesSearch = instructor.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                          instructor.bio.toLowerCase().includes(searchTerm.toLowerCase());
+    const searchLower = searchTerm.toLowerCase();
+    
+    // Verificar coincidencias en diferentes campos
+    const nameMatch = instructor.name.toLowerCase().includes(searchLower);
+    const bioMatch = instructor.bio?.toLowerCase().includes(searchLower) ?? false;
+    const specialtyMatch = instructor.specialty.toLowerCase().includes(searchLower);
+    
+    // Combinar condiciones de búsqueda
+    const matchesSearch = nameMatch || bioMatch || specialtyMatch;
     const matchesSpecialty = specialtyFilter ? instructor.specialty === specialtyFilter : true;
     
     return matchesSearch && matchesSpecialty;
@@ -37,7 +44,7 @@ const InstructoresPage: React.FC = () => {
 
   return (
     <div className="dark:bg-gray-900">
-      {/* Hero Section con animación */}
+      {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-800 to-secondary-800 text-white py-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -59,7 +66,7 @@ const InstructoresPage: React.FC = () => {
         </motion.div>
       </section>
 
-      {/* Filtros con animaciones */}
+      {/* Filtros */}
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -78,7 +85,7 @@ const InstructoresPage: React.FC = () => {
               </div>
               <input
                 type="text"
-                placeholder="Buscar instructores..."
+                placeholder="Buscar por nombre, especialidad o descripción..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10 pr-4 py-3 w-full border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-800 dark:text-white transition-all"
@@ -103,7 +110,7 @@ const InstructoresPage: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* Grid de Instructores con AnimatePresence */}
+      {/* Grid de Instructores */}
       <section className="py-12 bg-gray-50 dark:bg-gray-950">
         <div className="container-custom">
           <AnimatePresence mode='wait'>
@@ -115,7 +122,7 @@ const InstructoresPage: React.FC = () => {
                 exit={{ opacity: 0 }}
               >
                 <p className="text-gray-600 dark:text-gray-400 mb-8">
-                  Mostrando {filteredInstructors.length} de {instructors.length} instructores
+                  Mostrando {filteredInstructors.length} de {instructors.length} asesorías y consultorías
                 </p>
                 
                 <motion.div

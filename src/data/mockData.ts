@@ -27,7 +27,7 @@ import DesarrolloOrganizacional from './../medios/Asesoria/Asesoría y Consultor
 import GestiónEmpresarial from './../medios/Asesoria/Asesoría y Consultoría - Gestión Empresarial.png';
 import GestiónPública from './../medios/Asesoria/Asesoría y Consultoría - Gestión Pública.png';
 import PsicologíaIntegral from './../medios/Asesoria/Asesoría y Consultoría - Psicología Integral.png';
-import Coaching from './../medios/Asesoria/Coaching.jpeg';
+import Coaching from './../medios/Asesoria/Coaching Profesional.jpeg';
 
 
 
@@ -332,9 +332,7 @@ export const instructors = [
     specialty: 'Asesoría y Consultoría',	
     bio: 'Ingeniera de software con más de 8 años de experiencia en desarrollo frontend. Especialista en React y arquitecturas modernas de UI.',
     image: DesarrolloOrganizacional,
-    courses: 5,
-    students: 3200,
-    rating: 4.8,
+
     social: {
       twitter: 'https://twitter.com',
       linkedin: 'https://linkedin.com',
@@ -345,11 +343,7 @@ export const instructors = [
     id: '2',
     name: 'Gestión Empresarial',
     specialty: 'Asesoría y Consultoría',
-    bio: 'Arquitecto de software con enfoque en sistemas distribuidos y microservicios. Más de 10 años de experiencia en Node.js y Java.',
     image: GestiónEmpresarial,
-    courses: 7,
-    students: 4800,
-    rating: 4.6,
     social: {
       facebook: 'https://facebook.com',
       linkedin: 'https://linkedin.com',
@@ -359,11 +353,7 @@ export const instructors = [
     id: '3',
     name: 'Gestión Pública',
     specialty: 'Asesoría y Consultoría',
-    bio: 'Desarrolladora mobile con experiencia en React Native, Swift y Kotlin. Ha trabajado en aplicaciones de alta escala para empresas Fortune 500.',
     image: GestiónPública,
-    courses: 4,
-    students: 2700,
-    rating: 4.9,
     social: {
       twitter: 'https://twitter.com',
       youtube: 'https://youtube.com'
@@ -373,11 +363,7 @@ export const instructors = [
     id: '4',
     name: 'Psicología Integral',
     specialty: 'Asesoría y Consultoría',
-    bio: 'PhD en Inteligencia Artificial con experiencia en investigación. Especialista en Python para análisis de datos y machine learning.',
     image: PsicologíaIntegral,
-    courses: 6,
-    students: 5100,
-    rating: 4.7,
     social: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com'
@@ -387,11 +373,7 @@ export const instructors = [
     id: '5',
     name: 'Coaching',
     specialty: 'Asesoría y Consultoría',
-    bio: 'PhD en Inteligencia Artificial con experiencia en investigación. Especialista en Python para análisis de datos y machine learning.',
     image: Coaching,
-    courses: 6,
-    students: 5100,
-    rating: 4.7,
     social: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com'
