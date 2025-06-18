@@ -3,6 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import InstructorCard from '../components/ui/InstructorCard';
 import { instructors } from '../data/mockData';
 import { Search, Rocket, GraduationCap, BookOpen, Users } from 'lucide-react';
+import { HiSearch, HiChartBar, HiRefresh, HiBadgeCheck } from "react-icons/hi";
+import { FaHandshake } from "react-icons/fa";
+import { GiArcheryTarget } from "react-icons/gi";
 
 // Animaciones
 const containerVariants = {
@@ -161,97 +164,220 @@ const InstructoresPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Sección Únete al Equipo */}
-      <section className="py-16 bg-white dark:bg-gray-900">
-        <div className="container-custom">
-          <motion.div
-            className="grid md:grid-cols-2 gap-12 items-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "0px" }}
-          >
-            <div>
-              <motion.h2
-                initial={{ x: -50 }}
-                animate={{ x: 0 }}
-                className="text-3xl font-bold mb-6"
-              >
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600">
-                  Conviértete en Instructor
-                </span>
-              </motion.h2>
-              
-              <motion.ul
-                className="space-y-4 mb-8"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="show"
-              >
-                {benefits.map((benefit, index) => (
-                  <motion.li
-                    key={index}
-                    variants={itemVariants}
-                    className="flex items-start p-4 bg-gray-50 dark:bg-gray-800 rounded-lg group hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                  >
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary-600/10 flex items-center justify-center mr-4">
-                      {benefit.icon}
-                    </div>
-                    <span className="text-gray-700 dark:text-gray-300">{benefit.text}</span>
-                  </motion.li>
-                ))}
-              </motion.ul>
+<section className="py-16 bg-white dark:bg-gray-900 relative overflow-hidden">
+  {/* Elementos decorativos de fondo mejorados */}
+  <div className="absolute inset-0 overflow-hidden opacity-10 dark:opacity-5">
+    <div className="absolute -right-20 -top-20 w-72 h-72 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl animate-float-slow"></div>
+    <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-secondary-500 rounded-full mix-blend-multiply filter blur-3xl animate-float-slower"></div>
+    <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-tertiary-500 rounded-full mix-blend-multiply filter blur-3xl animate-float-medium"></div>
+  </div>
 
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <a 
-                  href="/contacto" 
-                  className="btn btn-primary inline-flex items-center group"
-                >
-                  <Rocket className="mr-2 transition-transform group-hover:rotate-45" />
-                  Postúlate Ahora
-                </a>
-              </motion.div>
-            </div>
+  <div className="container-custom relative z-10">
+    {/* Título principal mejorado */}
+    <motion.div
+      className="text-center mb-12"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+    >
+      <div className="inline-flex items-center justify-center mb-4">
+        <span className="h-px w-20 bg-gradient-to-r from-primary-400 to-secondary-400 mr-4"></span>
+        <span className="text-primary-600 dark:text-primary-400 font-medium tracking-wider">NUESTRO ENFOQUE ESTRATÉGICO</span>
+        <span className="h-px w-20 bg-gradient-to-r from-secondary-400 to-primary-400 ml-4"></span>
+      </div>
+      <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600 leading-tight">
+        Metodología que <span className="underline decoration-wavy decoration-tertiary-500">garantiza resultados</span>
+      </h2>
+    </motion.div>
 
-            <motion.div
-              className="hidden md:block relative"
-              initial={{ scale: 0.9, rotateY: 180 }}
-              animate={{ scale: 1, rotateY: 0 }}
-              transition={{ type: 'spring', stiffness: 100 }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-secondary-600/20 rounded-2xl -rotate-3"></div>
-              <img 
-                src="/instructor-team.jpg"
-                alt="Equipo de instructores"
-                className="relative z-10 rounded-2xl shadow-xl transform hover:rotate-2 transition-transform duration-300"
-              />
-            </motion.div>
-          </motion.div>
+    {/* Tarjeta de Metodología mejorada */}
+    <motion.div
+      className="relative bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-8 md:p-12 rounded-3xl shadow-2xl mb-8 border border-gray-100 dark:border-gray-700 overflow-hidden"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, type: "spring" }}
+    >
+      {/* Decoraciones de esquina mejoradas */}
+      <div className="absolute top-0 right-0 w-40 h-40 bg-primary-500/10 rounded-bl-full filter blur-xl animate-pulse-slow"></div>
+      <div className="absolute bottom-0 left-0 w-32 h-32 bg-secondary-500/10 rounded-tr-full filter blur-xl"></div>
+      
+      {/* Icono decorativo animado */}
+      <motion.div 
+        className="flex justify-center mb-6"
+        whileHover={{ scale: 1.05 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
+        <div className="p-5 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full shadow-lg">
+          <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+          </svg>
         </div>
-      </section>
+      </motion.div>
+      
+      {/* Título con efecto mejorado */}
+      <h3 className="text-3xl font-bold text-center mb-6 text-gray-800 dark:text-white">
+        <span className="relative inline-block pb-2">
+          <span className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary-400 via-tertiary-400 to-secondary-400 rounded-full"></span>
+          <span className="relative font-extrabold tracking-tight">METODOLOGÍA COMPROBADA</span>
+        </span>
+      </h3>
+      
+     <div className="grid md:grid-cols-2 gap-6">
+  {[
+    {
+      icon: <HiSearch className="text-primary-500 w-8 h-8" />,
+      title: "Diagnóstico Profundo",
+      text: "Análisis exhaustivo de la organización para identificar necesidades reales y oportunidades."
+    },
+    {
+      icon: <GiArcheryTarget className="text-primary-500 w-8 h-8" />,
+      title: "Diseño Personalizado",
+      text: "Propuestas de intervención alineadas con sus objetivos estratégicos y cultura organizacional."
+    },
+    {
+      icon: <FaHandshake className="text-primary-500 w-8 h-8" />,
+      title: "Implementación Colaborativa",
+      text: "Trabajo conjunto con sus equipos para asegurar compromiso y adopción efectiva."
+    },
+    {
+      icon: <HiChartBar className="text-primary-500 w-8 h-8" />,
+      title: "Seguimiento Continuo",
+      text: "Monitoreo constante con indicadores claros y ajustes oportunos para maximizar resultados."
+    },
+    {
+      icon: <HiRefresh className="text-primary-500 w-8 h-8" />,
+      title: "Iteración Ágil",
+      text: "Flexibilidad para adaptar estrategias según evolucionan las necesidades del proyecto."
+    },
+    {
+      icon: <HiBadgeCheck className="text-primary-500 w-8 h-8" />,
+      title: "Resultados Tangibles",
+      text: "Entrega de logros medibles y transferencia de capacidades para sostenibilidad."
+    }
+
+
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            className="bg-white/50 dark:bg-gray-800/50 p-5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{ y: -5 }}
+          >
+            <div className="flex items-start space-x-4">
+              <span className="text-2xl">{item.icon}</span>
+              <div>
+                <h4 className="font-bold text-lg text-primary-600 dark:text-primary-400 mb-1">{item.title}</h4>
+                <p className="text-gray-600 dark:text-gray-300">{item.text}</p>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* CTA mejorado */}
+      <motion.div
+        className="mt-10 text-center"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.6 }}
+      >
+      </motion.div>
+    </motion.div>
+
+    {/* Sección Alcance y Objetivos */}
+    <motion.div
+      className="grid md:grid-cols-2 gap-10"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ staggerChildren: 0.2 }}
+    >
+{/* Tarjeta de Alcance */}
+<motion.div
+  className="relative bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-10 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden"
+  variants={itemVariants}
+  whileHover={{ y: -8, transition: { duration: 0.3 } }}
+>
+  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-secondary-500"></div>
+  <div className="flex items-center mb-6">
+    <div className="p-3 bg-primary-100 dark:bg-primary-900/50 rounded-lg mr-4">
+      <svg className="w-6 h-6 text-white dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+      </svg>
+    </div>
+    <h3 className="text-xl font-bold text-gray-800 dark:text-white">ALCANCE</h3>
+  </div>
+  
+  <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
+    <p className="mb-4">Dirigido a organizaciones públicas, privadas y sociales que buscan mejorar su gestión y desarrollo.</p>
+    
+    <div className="space-y-4">
+      <div className="bg-primary-50 dark:bg-primary-900/20 p-4 rounded-lg border-l-4 border-black dark:border-primary-500">
+        <h4 className="font-semibold text-white dark:text-gray-300">Áreas clave</h4>
+        <p className="mt-1 text-white dark:text-primary-300 text-sm">Desarrollo organizacional, gestión empresarial, gestión pública</p>
+      </div>
+      
+      <div className="bg-primary-50 dark:bg-primary-900/20 p-4 rounded-lg border-l-4 border-black dark:border-primary-500">
+        <h4 className="font-semibold text-white dark:text-gray-300">Enfoque</h4>
+        <p className="mt-1 text-white dark:text-primary-300 text-sm">Integral, práctico y orientado a resultados</p>
+      </div>
+      
+      <div className="bg-primary-50 dark:bg-primary-900/20 p-4 rounded-lg border-l-4 border-black dark:border-primary-500">
+        <h4 className="font-semibold text-white dark:text-gray-300">Acompañamiento</h4>
+        <p className="mt-1 text-white dark:text-primary-300 text-sm">Institucional, grupal o individual</p>
+      </div>
+    </div>
+  </div>
+</motion.div>
+
+      {/* Tarjeta de Objetivos */}
+      <motion.div
+        className="relative bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-10 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden"
+        variants={itemVariants}
+        whileHover={{ y: -8, transition: { duration: 0.3 } }}
+      >
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary-500 to-primary-500"></div>
+        <div className="flex items-center mb-6">
+          <div className="p-3 bg-secondary-100 dark:bg-secondary-900/50 rounded-lg mr-4">
+            <svg className="w-6 h-6 text-white dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-gray-800 dark:text-white">OBJETIVOS</h3>
+        </div>
+        
+        <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
+          <p className="mb-4">Impulsar el desarrollo sostenible de organizaciones y personas mediante:</p>
+          
+          <div className="space-y-4">
+            <div className="bg-secondary-50 dark:bg-secondary-900/20 p-4 rounded-lg border-l-4 border-black dark:border-secondary-500">
+              <h4 className="font-semibold text-white dark:text-gray-300">Identificación</h4>
+              <p className="mt-1 text-white dark:text-primary-300 text-sm">Detección de brechas y diseño de soluciones efectivas</p>
+            </div>
+            
+            <div className="bg-secondary-50 dark:bg-secondary-900/20 p-4 rounded-lg border-l-4 border-black dark:border-secondary-500">
+              <h4 className="font-semibold text-white dark:text-gray-300">Fortalecimiento</h4>
+              <p className="mt-1 text-white dark:text-primary-300 text-sm">Capacidades individuales, de equipo y organizacionales</p>
+            </div>
+            
+            <div className="bg-secondary-50 dark:bg-secondary-900/20 p-4 rounded-lg border-l-4 border-black dark:border-secondary-500">
+              <h4 className="font-semibold text-white dark:text-gray-300">Impacto</h4>
+              <p className="mt-1 text-white dark:text-primary-300 text-sm">Generación de resultados positivos y duraderos</p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  </div>
+</section>
     </div>
   );
 };
-
-const benefits = [
-  {
-    icon: <Users className="text-primary-600" size={20} />,
-    text: "Impacta a miles de estudiantes globalmente"
-  },
-  {
-    icon: <BookOpen className="text-primary-600" size={20} />,
-    text: "Desarrolla contenido a tu propio ritmo"
-  },
-  {
-    icon: <GraduationCap className="text-primary-600" size={20} />,
-    text: "Certificación como experto en tu campo"
-  },
-  {
-    icon: <Search className="text-primary-600" size={20} />,
-    text: "Visibilidad en nuestra plataforma global"
-  }
-];
 
 export default InstructoresPage;
