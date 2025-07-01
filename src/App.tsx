@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { AuthProvider } from './contexts/AuthContext';
 import { CartProvider } from './contexts/CartContext';
@@ -11,6 +12,7 @@ import NosotrosPage from './pages/NosotrosPage';
 import CursosPage from './pages/CursosPage';
 import EventosPage from './pages/EventosPage';
 import InstructoresPage from './pages/InstructoresPage';
+import InstructorDetailPage from './pages/instructores/InstructorDetailPage';
 import ContactoPage from './pages/ContactoPage';
 import CarritoPage from './pages/CarritoPage';
 import LoginPage from './pages/auth/LoginPage';
@@ -32,11 +34,12 @@ const ScrollToTop: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
 function App() {
   return (
-    <ThemeProvider>
-      <AuthProvider>
-        <CartProvider>
-          <Router>
-            <ScrollToTop>
+    <HelmetProvider>
+      <ThemeProvider>
+        <AuthProvider>
+          <CartProvider>
+            <Router>
+              <ScrollToTop>
               <Routes>
                 {/* Auth pages without layout */}
                 <Route path="/iniciar-sesion" element={<LoginPage />} />
@@ -48,6 +51,7 @@ function App() {
                 <Route path="/cursos" element={<Layout><CursosPage /></Layout>} />
                 <Route path="/eventos" element={<Layout><EventosPage /></Layout>} />
                 <Route path="/instructores" element={<Layout><InstructoresPage /></Layout>} />
+                <Route path="/instructores/:id" element={<Layout><InstructorDetailPage /></Layout>} />
                 <Route path="/contacto" element={<Layout><ContactoPage /></Layout>} />
                 <Route path="/carrito" element={<Layout><CarritoPage /></Layout>} />
                 <Route path="/faqs" element={<Layout><Faqs /></Layout>} />
@@ -62,6 +66,7 @@ function App() {
         </CartProvider>
       </AuthProvider>
     </ThemeProvider>
+    </HelmetProvider>
   );
 }
 

@@ -1,11 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export interface InstructorProps {
   id: string;
   name: string;
   specialty: string;
   image: string;
+  bio?: string;
+  social?: {
+    twitter?: string;
+    linkedin?: string;
+    youtube?: string;
+    facebook?: string;
+  };
 }
 
 interface InstructorCardProps {
@@ -13,6 +19,11 @@ interface InstructorCardProps {
 }
 
 const InstructorCard: React.FC<InstructorCardProps> = ({ instructor }) => {
+  const handleOpenInstructorPage = () => {
+    // Abrir en una nueva ventana/pestaña
+    window.open(`/instructores/${instructor.id}`, '_blank');
+  };
+
   return (
     <div className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-soft-lg transition-transform duration-300 hover:-translate-y-2">
       <div className="relative pb-2/3">
@@ -24,22 +35,23 @@ const InstructorCard: React.FC<InstructorCardProps> = ({ instructor }) => {
       </div>
       
       <div className="p-5 text-center">
-        <Link to={`/instructores/${instructor.id}`}>
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-            {instructor.name}
-          </h3>
-        </Link>
+        <h3 
+          className="text-xl font-bold text-gray-900 dark:text-white mb-1 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer" 
+          onClick={handleOpenInstructorPage}
+        >
+          {instructor.name}
+        </h3>
         
         <p className="text-primary-600 dark:text-primary-400 font-medium mb-4">
           {instructor.specialty}
         </p>
         
-        <Link
-          to={`/instructores/${instructor.id}`}
+        <button
+          onClick={handleOpenInstructorPage}
           className="inline-block w-full bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-md transition-colors"
         >
           Empieza hoy
-        </Link>
+        </button>
       </div>
     </div>
   );

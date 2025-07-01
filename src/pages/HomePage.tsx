@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Award, ChevronRight, PlayCircle, X, Sparkles, Users, BrainCircuit, Handshake, Crown, GraduationCap,TrendingUp} from 'lucide-react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import CourseCard from '../components/ui/CourseCard';
 import EventCard from '../components/ui/EventCard';
 import AnimatedNumber from '../components/ui/AnimatedNumber'; // Asegúrate de crear este componente
@@ -38,7 +39,14 @@ const HomePage: React.FC = () => {
   const featuredEvents = events.filter(event => event.isFeatured).slice(0, 2);
 
   return (
-    <div className="overflow-x-hidden">
+    <>
+      <SEO 
+        title="TalentThree | Potencia tu desarrollo profesional"
+        description="Centro de formación profesional y consultoría empresarial en Perú. Cursos, diplomados, coaching y asesoría especializada para potenciar tu desarrollo profesional."
+        keywords="formación profesional, cursos, diplomados, coaching, consultoría empresarial, desarrollo organizacional, gestión empresarial, Perú"
+        url="/"
+      />
+      <div className="overflow-x-hidden">
       {/* Video Modal */}
       {showVideoModal && (
         <motion.div
@@ -122,14 +130,14 @@ ORGANIZACIÓN{' '}
 desarrollo profesional y haz que tu
 empresa alcance su máximo potencial.        </p>
 
-<div className="mb-2 -mt-2 md:mt-0 flex items-center gap-2">
+<div className="mb-2 -mt-2 md:mt-0 flex items-center gap-6">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link 
               to="/cursos" 
-              className="btn bg-white text-primary-700 hover:bg-gray-100 px-8 py-2 rounded-xl text-lg font-semibold shadow-lg flex items-center gap-2"
+      className="btn bg-white text-primary-700 hover:bg-gray-100 px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-base font-semibold shadow-md flex items-center gap-1"
             >
               Explorar cursos
-              <ChevronRight size={20} className="-mt-0.5" />
+              <ChevronRight size={18} className="-mt-0.5" />
             </Link>
           </motion.div>
           <motion.div 
@@ -138,9 +146,9 @@ empresa alcance su máximo potencial.        </p>
             onClick={() => setShowVideoModal(true)}
           >
             <div className="p-3.5 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full transition-all">
-              <PlayCircle className="w-8 h-8" />
+              <PlayCircle className="w-6 h-6" />
             </div>
-            <span className="font-medium">Ver video introductorio</span>
+            <span className="font-medium text-xs sm:text-sm">Ver video introductorio</span>
           </motion.div>
         </div>
       </motion.div>
@@ -167,14 +175,14 @@ empresa alcance su máximo potencial.        </p>
   <img
     src={Logoinicio}
     alt="Icono de inicio"
-    className="w-68 h-auto rounded-2xl shadow-lg"
+            className="w-full h-auto"
   />
 
   {/* Elemento animado flotante (lo puedes dejar o quitar) */}
   <motion.div 
     animate={{ y: [-10, 10, -10] }}
     transition={{ duration: 4, repeat: Infinity }}
-    className="absolute -right-4 -bottom-8 bg-white p-4 rounded-xl shadow-2xl border border-gray-100"
+    className="absolute -right-4 -bottom-12 bg-white p-4 rounded-xl shadow-2xl border border-gray-100"
   >
     <div className="flex items-center gap-3">
       <div className="p-2 bg-primary-100 rounded-lg">
@@ -420,6 +428,7 @@ Hemos impulsado la evolución del talento y la gestión en organizaciones líder
         </div>
       </section>
     </div>
+    </>
   );
 };
 

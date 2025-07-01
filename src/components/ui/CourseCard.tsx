@@ -48,7 +48,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
 
   const handleWhatsAppClick = (e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
-    const phoneNumber = '51960810996'; // Reemplaza con tu número real (código de país + número)
+    const phoneNumber = '51960810996'; // Reemplazar con el número real despues :b
     const message = `Estoy interesado en el curso "${course.title}", ¿me podría brindar más información?`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');

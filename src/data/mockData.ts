@@ -1,4 +1,3 @@
-
 import AsistenteAdministrativa from './../medios/cursos/Asistente Administrativa.png';
 import AsistenteContable from './../medios/cursos/Asistente Contable y Financiero.png';
 import AsistenteLogistica from './../medios/cursos/Asistente de Logística.png';
@@ -331,63 +330,67 @@ export const instructors = [
     id: '1',
     name: 'Desarrollo Organizacional',
     specialty: 'Asesoría y Consultoría',	
-    bio: 'Ingeniera de software con más de 8 años de experiencia en desarrollo frontend. Especialista en React y arquitecturas modernas de UI.',
+    bio: 'Especialistas en transformación organizacional con más de 15 años de experiencia ayudando a empresas a optimizar sus procesos internos y potenciar el talento humano.',
     image: DesarrolloOrganizacional,
-
     social: {
-      twitter: 'https://twitter.com',
-      linkedin: 'https://linkedin.com',
-      youtube: 'https://youtube.com'
+      twitter: 'https://twitter.com/talenthree_do',
+      linkedin: 'https://linkedin.com/company/talenthree-do',
+      youtube: 'https://youtube.com/@talenthree-do'
     }
   },
   {
     id: '2',
     name: 'Gestión Empresarial',
     specialty: 'Asesoría y Consultoría',
+    bio: 'Consultores expertos en optimización empresarial, especializados en estrategias de crecimiento sostenible y eficiencia operativa.',
     image: GestiónEmpresarial,
     social: {
-      facebook: 'https://facebook.com',
-      linkedin: 'https://linkedin.com',
+      facebook: 'https://facebook.com/talenthree-ge',
+      linkedin: 'https://linkedin.com/company/talenthree-ge',
     }
   },
   {
     id: '3',
     name: 'Gestión Pública',
     specialty: 'Asesoría',
+    bio: 'Especialistas en modernización del Estado y políticas públicas efectivas, con amplia experiencia en el sector público peruano.',
     image: GestiónPública,
     social: {
-      twitter: 'https://twitter.com',
-      youtube: 'https://youtube.com'
+      twitter: 'https://twitter.com/talenthree-gp',
+      youtube: 'https://youtube.com/@talenthree-gp'
     }
   },
   {
     id: '4',
     name: 'Psicología Integral',
     specialty: 'Consultoría',
+    bio: 'Psicólogos especializados en desarrollo personal y profesional, promoviendo el bienestar emocional y el crecimiento humano.',
     image: PsicologíaIntegral,
     social: {
-      linkedin: 'https://linkedin.com',
-      twitter: 'https://twitter.com'
+      linkedin: 'https://linkedin.com/company/talenthree-pi',
+      twitter: 'https://twitter.com/talenthree-pi'
     }
   },
-    {
+  {
     id: '5',
     name: 'Coaching',
     specialty: 'Asesoría',
+    bio: 'Coaches profesionales certificados que potencian el desarrollo personal y profesional a través de metodologías probadas.',
     image: Coaching,
     social: {
-      linkedin: 'https://linkedin.com',
-      twitter: 'https://twitter.com'
+      linkedin: 'https://linkedin.com/company/talenthree-coaching',
+      twitter: 'https://twitter.com/talenthree-coach'
     }
   },
-      {
+  {
     id: '6',
     name: 'Recursos Humanos y Contabilidad',
     specialty: 'Outsourcing',
+    bio: 'Servicios integrales de outsourcing especializados en RRHH y contabilidad, optimizando costos y garantizando cumplimiento normativo.',
     image: Outsourcing,
     social: {
-      linkedin: 'https://linkedin.com',
-      twitter: 'https://twitter.com'
+      linkedin: 'https://linkedin.com/company/talenthree-outsourcing',
+      twitter: 'https://twitter.com/talenthree-out'
     }
   },
 ];
