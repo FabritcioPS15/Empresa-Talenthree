@@ -1,34 +1,36 @@
 import AsistenteAdministrativa from './../medios/cursos/Asistente Administrativa.png';
 import AsistenteContable from './../medios/cursos/Asistente Contable y Financiero.png';
-import AsistenteLogistica from './../medios/cursos/Asistente de Logística.png';
+import AsistenteLogistica from './../medios/cursos/Asistente de Logistica.png';
 import AsistenteRRHH from './../medios/cursos/Asistente de Recursos Humanos.png';
 import AuxiliarTI from './../medios/cursos/Auxiliar de TI.png';
 import CajeroComercial from './../medios/cursos/Cajero comercial y financiero.png';
 import ComercioInternacional from './../medios/cursos/Comercio Internacional.png';
 import Comunicacionasertiva from './../medios/cursos/ComunicacionAsertiva.jpeg';
 import DiplomadoCiberseguridad from './../medios/cursos/Diplomado en Ciberseguridad.png';
-import DiplomadoGestionAmbiental from './../medios/cursos/Diplomado en Gestión Ambiental.png';
-import DiplomadoGestiondeCalidad from './../medios/cursos/Diplomado en Gestión de la Calidad.png';
-import DiplomadoGestiondeProyectos from './../medios/cursos/Diplomado en gestión de Proyectos.png';
-import DiplomadoGestionInmobiliaria from './../medios/cursos/Diplomado en Gestión Inmobiliaria.png';
-import DiplomadoGestionPublica from './../medios/cursos/Diplomado en Gestión Pública.png';
+import DiplomadoGestionAmbiental from './../medios/cursos/Diplomado en Gestion Ambiental.png';
+import DiplomadoGestiondeCalidad from './../medios/cursos/Diplomado en Gestion de la Calidad.png';
+import DiplomadoGestiondeProyectos from './../medios/cursos/Diplomado en Gestion de Proyectos.png';
+import DiplomadoGestionInmobiliaria from './../medios/cursos/Diplomado en Gestion Inmobiliaria.png';
+import DiplomadoGestionPublica from './../medios/cursos/Diplomado en Gestion Publica.png';
 import DiplomadoEnSST from './../medios/cursos/Diplomado en SST.png';
-import DiplomadoEnGTHEstrategico from './../medios/cursos/Diplomado en GTH Estratégico.png';
+import DiplomadoEnGTHEstrategico from './../medios/cursos/Diplomado en GTH Estrategico.png';
 import Gestiondetiempo from './../medios/cursos/Gestiondetiempo.jpeg';
-import Ingles from './../medios/cursos/Inglés para el trabajo.png';
+import Ingles from './../medios/cursos/Ingles para el Trabajo.png';
 import InteligenciaEmocional from './../medios/cursos/Inteligencia Emocional.png';
 import Liderazgo from './../medios/cursos/LiderazgoPersonal.jpeg';
 import Manejodeestres from './../medios/cursos/Manejodeestres.jpeg';
 import Marcapersonal from './../medios/cursos/MarcaPersonal.jpeg';
 import PensamientoCritico from './../medios/cursos/PensamientoCritico.jpeg';
 import Trabajoenequipo from './../medios/cursos/Trabajoenequipo.jpeg';
-import DesarrolloOrganizacional from './../medios/Asesoria/Asesoría y Consultoría - Desarrollo Organizacional.png';
-import GestiónEmpresarial from './../medios/Asesoria/Asesoría y Consultoría - Gestión Empresarial.png';
-import GestiónPública from './../medios/Asesoria/Asesoría y Consultoría - Gestión Pública.png';
-import PsicologíaIntegral from './../medios/Asesoria/Asesoría y Consultoría - Psicología Integral.png';
+import DesarrolloOrganizacional from './../medios/Asesoria/1.png';
+import GestiónEmpresarial from './../medios/Asesoria/2.png';
+import GestiónPública from './../medios/Asesoria/4.png';
+import PsicologíaIntegral from './../medios/Asesoria/Asesoria y Consultoria - Psicologia Integral.png';
 import Coaching from './../medios/Asesoria/Coaching Profesional.jpeg';
-import Outsourcing from './../medios/Asesoria/Outsourcing.jpeg';
-
+import Outsourcing from './../medios/Asesoria/5.png';
+import BuildConsult from './../medios/Asesoria/6.png';
+import Agroindustria from './../medios/Asesoria/7.png';
+import Compliance from './../medios/Asesoria/8.png';
 
 
 export const courses = [
@@ -388,6 +390,39 @@ export const instructors = [
     specialty: 'Outsourcing',
     bio: 'Servicios integrales de outsourcing especializados en RRHH y contabilidad, optimizando costos y garantizando cumplimiento normativo.',
     image: Outsourcing,
+    social: {
+      linkedin: 'https://linkedin.com/company/talenthree-outsourcing',
+      twitter: 'https://twitter.com/talenthree-out'
+    }
+  },
+  {
+    id: '7',
+    name: 'BuildConsult',
+    specialty: 'Asesoría',
+    bio: 'Servicios integrales de outsourcing especializados en RRHH y contabilidad, optimizando costos y garantizando cumplimiento normativo.',
+    image: BuildConsult,
+    social: {
+      linkedin: 'https://linkedin.com/company/talenthree-outsourcing',
+      twitter: 'https://twitter.com/talenthree-out'
+    }
+  },
+  {
+    id: '8',
+    name: 'Agroindustria y Alimentos',
+    specialty: 'Asesoría',
+    bio: 'Servicios integrales de outsourcing especializados en RRHH y contabilidad, optimizando costos y garantizando cumplimiento normativo.',
+    image: Agroindustria,
+    social: {
+      linkedin: 'https://linkedin.com/company/talenthree-outsourcing',
+      twitter: 'https://twitter.com/talenthree-out'
+    }
+  },
+  {
+    id: '9',
+    name: 'Compliance',
+    specialty: 'Asesoría',
+    bio: 'Servicios integrales de outsourcing especializados en RRHH y contabilidad, optimizando costos y garantizando cumplimiento normativo.',
+    image: Compliance,
     social: {
       linkedin: 'https://linkedin.com/company/talenthree-outsourcing',
       twitter: 'https://twitter.com/talenthree-out'

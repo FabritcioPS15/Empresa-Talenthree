@@ -30,7 +30,7 @@ const Header: React.FC = () => {
         { name: 'Diplomados', path: '/cursos?filter=diplomados' },
       ],
     },
-    { name: 'Asesoría y Consultoría', path: '/instructores' },
+    { name: 'Asesoría y Consultoría', path: '/otras-soluciones' },
     { name: 'Noticias y eventos', path: '/eventos' },
     { name: 'Contáctanos', path: '/contacto' },
   ];

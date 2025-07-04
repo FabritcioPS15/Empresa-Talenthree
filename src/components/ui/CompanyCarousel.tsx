@@ -2,6 +2,8 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import latiariLogo from './../../medios/Latiari logo.jpg';
+import QualitiyEdificaciones from './../../medios/Qualitiy Edificaciones Logo.png';
 
 const companies = [
   {
@@ -21,6 +23,12 @@ const companies = [
   },
   {
     logo: 'https://yt3.googleusercontent.com/IY4fmz52J_4sn2JVpgwwu2qDF69Oj3cQb_pGr6zw8sUiUrnbJCJmgk3PvRf84D4Ws4ZmWCfvhrs=s900-c-k-c0x00ffffff-no-rj',
+  },
+  {
+    logo: latiariLogo,
+  },
+  {
+    logo: QualitiyEdificaciones,
   },
 ];
 

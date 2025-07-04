@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export interface InstructorProps {
   id: string;
@@ -17,6 +18,20 @@ export interface InstructorProps {
 interface InstructorCardProps {
   instructor: InstructorProps;
 }
+
+const getAsesoriaPath = (name: string) => {
+  // Normaliza el nombre para crear el path
+  return '/asesorias/' + name
+    .toLowerCase()
+    .replace(/á/g, 'a')
+    .replace(/é/g, 'e')
+    .replace(/í/g, 'i')
+    .replace(/ó/g, 'o')
+    .replace(/ú/g, 'u')
+    .replace(/ñ/g, 'n')
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9\-]/g, '');
+};
 
 const InstructorCard: React.FC<InstructorCardProps> = ({ instructor }) => {
   const handleOpenInstructorPage = () => {
@@ -46,12 +61,12 @@ const InstructorCard: React.FC<InstructorCardProps> = ({ instructor }) => {
           {instructor.specialty}
         </p>
         
-        <button
-          onClick={handleOpenInstructorPage}
+        <Link
+          to={getAsesoriaPath(instructor.name)}
           className="inline-block w-full bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-md transition-colors"
         >
           Empieza hoy
-        </button>
+        </Link>
       </div>
     </div>
   );

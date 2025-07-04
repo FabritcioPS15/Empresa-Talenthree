@@ -164,7 +164,11 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
                 e.stopPropagation();
                 openModal();
               }}
-              className="mt-4 w-full flex items-center justify-center bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-md transition-colors"
+              className={`mt-4 w-full flex items-center justify-center text-white py-3 px-4 rounded-md transition-colors ${
+                course.category === 'Diplomados' 
+                  ? 'bg-red-600 hover:bg-red-700' 
+                  : 'bg-green-600 hover:bg-green-700'
+              }`}
             >
               <Gift size={18} className="mr-2" />
               Ver Beneficios

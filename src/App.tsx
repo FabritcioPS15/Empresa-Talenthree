@@ -20,6 +20,15 @@ import RegisterPage from './pages/auth/RegisterPage';
 import Faqs from './pages/Faqs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import OtrasSolucionesPage from './pages/OtrasSolucionesPage';
+
+// Asesorías Pages
+import DesarrolloOrganizacionalPage from './pages/asesorias/DesarrolloOrganizacionalPage';
+import GestionEmpresarialPage from './pages/asesorias/GestionEmpresarialPage';
+import GestionPublicaPage from './pages/asesorias/GestionPublicaPage';
+import PsicologiaIntegralPage from './pages/asesorias/PsicologiaIntegralPage';
+import CoachingPage from './pages/asesorias/CoachingPage';
+import OutsourcingPage from './pages/asesorias/OutsourcingPage';
 
 // Scroll to top when navigating
 const ScrollToTop: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -57,6 +66,15 @@ function App() {
                 <Route path="/faqs" element={<Layout><Faqs /></Layout>} />
                 <Route path="/privacidad" element={<Layout><PrivacyPolicy /></Layout>} />
                 <Route path="/terminos" element={<Layout><TermsOfService /></Layout>} />
+                <Route path="/otras-soluciones" element={<Layout><OtrasSolucionesPage /></Layout>} />
+                
+                {/* Asesorías Routes */}
+                <Route path="/asesorias/desarrollo-organizacional" element={<Layout><DesarrolloOrganizacionalPage /></Layout>} />
+                <Route path="/asesorias/gestion-empresarial" element={<Layout><GestionEmpresarialPage /></Layout>} />
+                <Route path="/asesorias/gestion-publica" element={<Layout><GestionPublicaPage /></Layout>} />
+                <Route path="/asesorias/psicologia-integral" element={<Layout><PsicologiaIntegralPage /></Layout>} />
+                <Route path="/asesorias/coaching" element={<Layout><CoachingPage /></Layout>} />
+                <Route path="/asesorias/outsourcing" element={<Layout><OutsourcingPage /></Layout>} />
                 
                 {/* 404 page */}
                 <Route path="*" element={<Layout><div className="container mx-auto py-20 text-center"><h1 className="text-3xl font-bold">Página no encontrada</h1></div></Layout>} />
