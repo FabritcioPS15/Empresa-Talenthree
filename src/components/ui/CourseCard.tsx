@@ -3,6 +3,7 @@ import { Clock, Users, Star, Monitor, Tag, Gift} from 'lucide-react';
 import { TbCertificate } from "react-icons/tb";
 import { FaWhatsapp } from "react-icons/fa";
 import { useCart } from '../../contexts/CartContext';
+import { useNavigate } from 'react-router-dom';
 import Modal from 'react-modal';
 
 // Configuración básica del modal (necesario para accesibilidad)
@@ -30,7 +31,20 @@ interface CourseCardProps {
 
 const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
   const { addItem } = useCart();
+  const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Mapeo de IDs de cursos de Formación Laboral a sus rutas
+  const formacionLaboralRoutes: { [key: string]: string } = {
+    '9': '/cursos/comercio-internacional',
+    '10': '/cursos/auxiliar-ti',
+    '11': '/cursos/asistente-rrhh',
+    '12': '/cursos/asistente-administrativo',
+    '13': '/cursos/asistente-contable',
+    '14': '/cursos/auxiliar-logistica',
+    '15': '/cursos/cajero-comercial',
+    '16': '/cursos/ingles-trabajo'
+  };
 
   const handleAddToCart = (e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
@@ -45,6 +59,31 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const handleVerBeneficios = (e?: React.MouseEvent) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    
+    console.log('handleVerBeneficios clicked', { 
+      category: course.category, 
+      id: course.id, 
+      isFormacionLaboral: course.category === 'Formación Laboral' || course.category === 'Formacion Laboral',
+      hasRoute: formacionLaboralRoutes[course.id]
+    });
+    
+    // Si es un curso de Formación Laboral (con o sin tilde), redirigir a la página individual
+    if ((course.category === 'Formación Laboral' || course.category === 'Formacion Laboral') && formacionLaboralRoutes[course.id]) {
+      console.log('Navegando a:', formacionLaboralRoutes[course.id]);
+      navigate(formacionLaboralRoutes[course.id]);
+      return;
+    } else {
+      // Para otros cursos, abrir el modal como antes
+      console.log('Abriendo modal');
+      openModal();
+    }
+  };
 
   const handleWhatsAppClick = (e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
@@ -160,10 +199,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
             </button>
           ) : (
             <button
-              onClick={(e) => {
-                e.stopPropagation();
-                openModal();
-              }}
+              onClick={handleVerBeneficios}
               className={`mt-4 w-full flex items-center justify-center text-white py-3 px-4 rounded-md transition-colors ${
                 course.category === 'Diplomados' 
                   ? 'bg-red-600 hover:bg-red-700' 

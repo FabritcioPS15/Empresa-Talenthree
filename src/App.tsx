@@ -30,6 +30,16 @@ import PsicologiaIntegralPage from './pages/asesorias/PsicologiaIntegralPage';
 import CoachingPage from './pages/asesorias/CoachingPage';
 import OutsourcingPage from './pages/asesorias/OutsourcingPage';
 
+// Cursos de Formación Laboral Pages
+import ComercioInternacionalPage from './pages/cursos/ComercioInternacionalPage';
+import AuxiliarTIPage from './pages/cursos/AuxiliarTIPage';
+import AsistenteRRHHPage from './pages/cursos/AsistenteRRHHPage';
+import AsistenteAdministrativoPage from './pages/cursos/AsistenteAdministrativoPage';
+import AsistenteContablePage from './pages/cursos/AsistenteContablePage';
+import AuxiliarLogisticaPage from './pages/cursos/AuxiliarLogisticaPage';
+import CajeroComercialPage from './pages/cursos/CajeroComercialPage';
+import InglesTrabajoPage from './pages/cursos/InglesTrabajoPage';
+
 // Scroll to top when navigating
 const ScrollToTop: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
@@ -75,6 +85,16 @@ function App() {
                 <Route path="/asesorias/psicologia-integral" element={<Layout><PsicologiaIntegralPage /></Layout>} />
                 <Route path="/asesorias/coaching" element={<Layout><CoachingPage /></Layout>} />
                 <Route path="/asesorias/outsourcing" element={<Layout><OutsourcingPage /></Layout>} />
+                
+                {/* Cursos de Formación Laboral Routes */}
+                <Route path="/cursos/comercio-internacional" element={<Layout><ComercioInternacionalPage /></Layout>} />
+                <Route path="/cursos/auxiliar-ti" element={<Layout><AuxiliarTIPage /></Layout>} />
+                <Route path="/cursos/asistente-rrhh" element={<Layout><AsistenteRRHHPage /></Layout>} />
+                <Route path="/cursos/asistente-administrativo" element={<Layout><AsistenteAdministrativoPage /></Layout>} />
+                <Route path="/cursos/asistente-contable" element={<Layout><AsistenteContablePage /></Layout>} />
+                <Route path="/cursos/auxiliar-logistica" element={<Layout><AuxiliarLogisticaPage /></Layout>} />
+                <Route path="/cursos/cajero-comercial" element={<Layout><CajeroComercialPage /></Layout>} />
+                <Route path="/cursos/ingles-trabajo" element={<Layout><InglesTrabajoPage /></Layout>} />
                 
                 {/* 404 page */}
                 <Route path="*" element={<Layout><div className="container mx-auto py-20 text-center"><h1 className="text-3xl font-bold">Página no encontrada</h1></div></Layout>} />
