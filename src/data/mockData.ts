@@ -9,7 +9,7 @@ import Comunicacionasertiva from './../medios/cursos/ComunicacionAsertiva.jpeg';
 import DiplomadoCiberseguridad from './../medios/cursos/Diplomado en Ciberseguridad.png';
 import DiplomadoGestionAmbiental from './../medios/cursos/Diplomado en Gestion Ambiental.png';
 import DiplomadoGestiondeCalidad from './../medios/cursos/Diplomado en Gestion de la Calidad.png';
-import DiplomadoGestiondeProyectos from './../medios/cursos/Diplomado en Gestion de Proyectos.png';
+import DiplomadoGestiondeProyectos from './../medios/cursos/Diplomado en gestion de Proyectos.png';
 import DiplomadoGestionInmobiliaria from './../medios/cursos/Diplomado en Gestion Inmobiliaria.png';
 import DiplomadoGestionPublica from './../medios/cursos/Diplomado en Gestion Publica.png';
 import DiplomadoEnSST from './../medios/cursos/Diplomado en SST.png';
