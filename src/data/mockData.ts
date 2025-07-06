@@ -15,7 +15,7 @@ import DiplomadoGestionPublica from './../medios/cursos/Diplomado en Gestion Pub
 import DiplomadoEnSST from './../medios/cursos/Diplomado en SST.png';
 import DiplomadoEnGTHEstrategico from './../medios/cursos/Diplomado en GTH Estrategico.png';
 import Gestiondetiempo from './../medios/cursos/Gestiondetiempo.jpeg';
-import Ingles from './../medios/cursos/Ingles para el Trabajo.png';
+import Ingles from './../medios/cursos/Ingles para el trabajo.png';
 import InteligenciaEmocional from './../medios/cursos/Inteligencia Emocional.png';
 import Liderazgo from './../medios/cursos/LiderazgoPersonal.jpeg';
 import Manejodeestres from './../medios/cursos/Manejodeestres.jpeg';
