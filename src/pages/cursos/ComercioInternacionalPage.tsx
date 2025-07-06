@@ -151,12 +151,13 @@ const ComercioInternacionalPage: React.FC = () => {
         {/* Sección inferior: info detallada */}
         <div className="mt-12 px-2 md:px-8">
           <h2 className="text-xl md:text-2xl font-bold text-primary-600 mb-2">Las exportaciones crecen, y las empresas necesitan talento preparado.</h2>
-          <div className="w-24 h-1 bg-primary-600 rounded mb-6"></div>
+          <div className="w-24 h-1 bg-primary-600 dark:bg-primary-400 rounded mb-6"></div>
           <p className="text-gray-700 dark:text-gray-200 mb-6 text-base md:text-lg">
             El Programa de Comercio Internacional ha sido diseñado para brindar a los participantes los conocimientos y habilidades fundamentales en los procesos de importación y exportación, normativas aduaneras, logística global y negociación internacional.<br/><br/>
             Este programa está orientado tanto a estudiantes como a técnicos, profesionales y emprendedores que deseen insertarse o mejorar su desempeño en el dinámico sector del comercio exterior.
           </p>
           <h3 className="text-lg font-bold text-primary-600 mb-2">Ámbito laboral</h3>
+          <div className="w-24 h-1 bg-primary-600 dark:bg-primary-400 rounded mb-4"></div>
           <ul className="list-disc pl-6 mb-6 text-gray-700 dark:text-gray-200">
             <li>Empresas exportadoras</li>
             <li>Agencias de aduanas</li>
@@ -164,6 +165,7 @@ const ComercioInternacionalPage: React.FC = () => {
             <li>Emprendimientos que deseen acceder a mercados internacionales.</li>
           </ul>
           <h3 className="text-lg font-bold text-primary-600 mb-2">Beneficios</h3>
+          <div className="w-24 h-1 bg-primary-600 dark:bg-primary-400 rounded mb-4"></div>
           <ul className="list-disc pl-6 mb-6 text-gray-700 dark:text-gray-200">
             <li>Formación práctica enfocada en los procesos reales del comercio exterior.</li>
             <li>Acceso a clases en vivo y grabadas 100 % virtuales.</li>
@@ -172,6 +174,7 @@ const ComercioInternacionalPage: React.FC = () => {
             <li>Asesoría de expertos con experiencia en comercio internacional.</li>
           </ul>
           <h3 className="text-lg font-bold text-primary-600 mb-2">Módulos</h3>
+          <div className="w-24 h-1 bg-primary-600 dark:bg-primary-400 rounded mb-4"></div>
           <ul className="list-disc pl-6 mb-6 text-gray-700 dark:text-gray-200">
             <li><b>Módulo 1:</b> Fundamentos del Comercio Internacional</li>
             <li><b>Módulo 2:</b> Normativa y Documentación Aduanera</li>
@@ -183,6 +186,7 @@ const ComercioInternacionalPage: React.FC = () => {
 
           {/* Certificación */}
           <h3 className="text-lg font-bold text-primary-600 mb-2">Certificación</h3>
+          <div className="w-24 h-1 bg-primary-600 dark:bg-primary-400 rounded mb-4"></div>
           <p className="text-gray-700 dark:text-gray-200 mb-2">
             Al culminar satisfactoriamente los 6 módulos, el participante obtendrá una <b>Doble Certificación</b>:
           </p>
@@ -193,6 +197,7 @@ const ComercioInternacionalPage: React.FC = () => {
 
           {/* Requisitos */}
           <h3 className="text-lg font-bold text-primary-600 mb-2">Requisitos</h3>
+          <div className="w-24 h-1 bg-primary-600 dark:bg-primary-400 rounded mb-4"></div>
           <ul className="list-disc pl-6 mb-6 text-gray-700 dark:text-gray-200">
             <li>Dos fotos tamaño carnet en formato digital</li>
             <li>DNI en formato PDF o JPG</li>

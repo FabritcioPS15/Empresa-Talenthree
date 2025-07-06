@@ -26,7 +26,7 @@ const Header: React.FC = () => {
       subLinks: [
         { name: 'Desarrollo Personal', path: '/cursos?filter=desarrollo-personal' },
         { name: 'Formación Laboral', path: '/cursos?filter=formacion-laboral' },
-        { name: 'Talleres y Diplomas', path: '/cursos?filter=talleres-diplomas' },
+        { name: 'Formación Especializada', path: '/cursos?filter=talleres-diplomas' },
         { name: 'Diplomados', path: '/cursos?filter=diplomados' },
       ],
     },

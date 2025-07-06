@@ -32,7 +32,7 @@ const toSlug = (str: string) =>
 const categorySlugMap: { [key: string]: string } = {
   'desarrollo-personal': 'Desarrollo Personal',
   'formacion-laboral': 'Formación Laboral',
-  'talleres-diplomas': 'Talleres y Diplomas',
+      'talleres-diplomas': 'Formación Especializada',
   'diplomados': 'Diplomados'
 };
 

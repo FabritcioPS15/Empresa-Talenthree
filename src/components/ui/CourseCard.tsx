@@ -22,7 +22,7 @@ export interface CourseProps {
   rating?: number;
   level?: 'Básico' | 'Intermedio' | 'Avanzado' | '.';
   modality?: 'Virtual' | 'Presencial' | 'Híbrido';
-  category?: 'Desarrollo Personal' | 'Formación Laboral' | 'Talleres y Diplomas' | 'Diplomados';
+  category?: 'Desarrollo Personal' | 'Formación Laboral' | 'Formacion Laboral' | 'Formación Especializada' | 'Diplomados';
 }
 
 interface CourseCardProps {
