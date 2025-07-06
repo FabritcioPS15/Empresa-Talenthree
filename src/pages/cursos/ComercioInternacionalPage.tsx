@@ -74,7 +74,7 @@ const ComercioInternacionalPage: React.FC = () => {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/watch?v=dD5w6UMeT7g" 
+                src="https://www.youtube.com/embed/dD5w6UMeT7g"
                 title="Video de Comercio Internacional"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -186,7 +186,7 @@ const ComercioInternacionalPage: React.FC = () => {
 
           {/* Certificación */}
           <h3 className="text-lg font-bold text-primary-600 mb-2">Certificación</h3>
-          <div className="w-24 h-1 bg-primary-600 dark:bg-primary-400 rounded mb-4"></div>
+          <div className="w-24 h-1 bg-primary-600 rounded mb-4"></div>
           <p className="text-gray-700 dark:text-gray-200 mb-2">
             Al culminar satisfactoriamente los 6 módulos, el participante obtendrá una <b>Doble Certificación</b>:
           </p>
@@ -197,7 +197,7 @@ const ComercioInternacionalPage: React.FC = () => {
 
           {/* Requisitos */}
           <h3 className="text-lg font-bold text-primary-600 mb-2">Requisitos</h3>
-          <div className="w-24 h-1 bg-primary-600 dark:bg-primary-400 rounded mb-4"></div>
+          <div className="w-24 h-1 bg-primary-600 rounded mb-4"></div>
           <ul className="list-disc pl-6 mb-6 text-gray-700 dark:text-gray-200">
             <li>Dos fotos tamaño carnet en formato digital</li>
             <li>DNI en formato PDF o JPG</li>
