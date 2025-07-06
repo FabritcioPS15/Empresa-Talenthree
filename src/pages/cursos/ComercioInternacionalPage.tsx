@@ -74,7 +74,7 @@ const ComercioInternacionalPage: React.FC = () => {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://youtu.be/dD5w6UMeT7g?si=jQ2PS8Iy2mrSF_bi"
+                src="https://www.youtube.com/watch?v=dD5w6UMeT7g" 
                 title="Video de Comercio Internacional"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
