@@ -28,6 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       case '/cursos': return 'Cursos';
       case '/eventos': return 'Eventos';
       case '/instructores': return 'Instructores';
+      case '/eventos': return 'Noticias y Eventos';
       case '/contacto': return 'Contacto';
       case '/carrito': return 'Carrito';
       default: return '';
@@ -52,15 +53,21 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <Header />
     
         <main className={`${getMainPadding()} px-0 sm:px-2 md:px-0 -mb-12`}>
-          {location.pathname !== '/' && (
-            <div className="container mx-auto px-2 -mb-6">
-              <div className="flex items-center text-sm text-gray-900 dark:text-white-700">
-                <Link to="/" className="hover:text-primary-600 dark:hover:text-primary-200">
+          {/* Breadcrumb llamativo en todas las páginas excepto home y asesorías */}
+          {location.pathname !== '/' &&
+            !location.pathname.startsWith('/asesorias') && (
+            <div className="container mx-auto px-2 -mb-1">
+              <div
+                className={
+                  "flex items-center text-base font-semibold text-primary-700 bg-white/90 dark:bg-gray-900/90 rounded-lg shadow-lg border-2 border-primary-300 dark:border-primary-700 max-w-sm w-full px-2 md:px-3 lg:px-4 py-1 md:py-1.5 my-1 md:my-2 justify-start"
+                }
+              >
+                <Link to="/" className="hover:text-primary-500 font-bold">
                   Inicio
                 </Link>
-                <ChevronRight size={16} className="mx-3" />
-                <span className="text-white dark:text-white font-medium">
-                  {getPageTitle()}
+                <ChevronRight size={22} className="mx-2 md:mx-3 text-primary-400" />
+                <span className="text-primary-900 dark:text-white font-bold text-lg">
+                  {location.pathname === '/otras-soluciones' ? 'Asesoría y Consultoría' : location.pathname === '/cursos' ? 'Educación continua' : location.pathname === '/eventos' ? 'Noticias y eventos' : getPageTitle()}
                 </span>
               </div>
             </div>

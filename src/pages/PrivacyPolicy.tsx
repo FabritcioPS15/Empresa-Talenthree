@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const PrivacyPolicy: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white py-16">
-      <motion.div 
+      <motion.div
         className="container mx-auto px-4 max-w-4xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ const PrivacyPolicy: React.FC = () => {
               1. Información que Recopilamos
             </h2>
             <p className="mb-4">
-              En TalentThree, recopilamos y procesamos la siguiente información:
+              En TYX, recopilamos y procesamos la siguiente información:
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Información de contacto (nombre, correo electrónico, teléfono)</li>
@@ -83,7 +83,7 @@ const PrivacyPolicy: React.FC = () => {
               Para cualquier consulta sobre nuestra política de privacidad, puede contactarnos en:
             </p>
             <div className="bg-purple-50 p-4 rounded-lg">
-              <p>Email: privacidad@talenthree.com</p>
+              <p>Email: privacidad@tyx.com</p>
               <p>Teléfono: (+51) 919746504</p>
               <p>Dirección: Av. Simón Bolívar 460, 401. Pueblo Libre</p>
             </div>

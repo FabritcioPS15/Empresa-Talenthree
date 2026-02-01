@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const TermsOfService: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white py-16">
-      <motion.div 
+      <motion.div
         className="container mx-auto px-4 max-w-4xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ const TermsOfService: React.FC = () => {
               1. Aceptación de los Términos
             </h2>
             <p className="mb-4">
-              Al acceder y utilizar los servicios de TalentThree, usted acepta estar sujeto a estos términos de servicio. 
+              Al acceder y utilizar los servicios de TYX, usted acepta estar sujeto a estos términos de servicio.
               Si no está de acuerdo con alguna parte de estos términos, no podrá acceder al servicio.
             </p>
           </section>
@@ -67,7 +67,7 @@ const TermsOfService: React.FC = () => {
               5. Propiedad Intelectual
             </h2>
             <p className="mb-4">
-              Todo el contenido proporcionado en la plataforma es propiedad de TalentThree o sus licenciantes.
+              Todo el contenido proporcionado en la plataforma es propiedad de TYX o sus licenciantes.
               No está permitido copiar, distribuir o modificar el contenido sin autorización expresa.
             </p>
           </section>
@@ -77,7 +77,7 @@ const TermsOfService: React.FC = () => {
               6. Limitación de Responsabilidad
             </h2>
             <p className="mb-4">
-              TalentThree no será responsable por daños indirectos, incidentales o consecuentes
+              TYX no será responsable por daños indirectos, incidentales o consecuentes
               que surjan del uso o la imposibilidad de usar nuestros servicios.
             </p>
           </section>
@@ -100,7 +100,7 @@ const TermsOfService: React.FC = () => {
               Para cualquier consulta sobre nuestros términos de servicio:
             </p>
             <div className="bg-purple-50 p-4 rounded-lg">
-              <p>Email: legal@talenthree.com</p>
+              <p>Email: legal@tyx.com</p>
               <p>Teléfono: (+51) 960810996</p>
               <p>Dirección: Av. Simón Bolívar 460, 401. Pueblo Libre</p>
             </div>

@@ -21,7 +21,7 @@ const itemVariants = {
   show: { opacity: 1, y: 0 },
   hover: { scale: 1.02 }
 };
-const toSlug = (str: string) => 
+const toSlug = (str: string) =>
   str
     .toLowerCase()
     .normalize('NFD')
@@ -32,7 +32,7 @@ const toSlug = (str: string) =>
 const categorySlugMap: { [key: string]: string } = {
   'desarrollo-personal': 'Desarrollo Personal',
   'formacion-laboral': 'Formación Laboral',
-      'talleres-diplomas': 'Formación Especializada',
+  'talleres-diplomas': 'Formación Especializada',
   'diplomados': 'Diplomados'
 };
 
@@ -48,7 +48,7 @@ const CursosPage: React.FC = () => {
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const categorySlug = params.get('filter') || '';
-    
+
     // Convertir slug a nombre de categoría real
     const categoryName = categorySlugMap[categorySlug] || '';
     setSelectedCategory(categoryName);
@@ -56,19 +56,19 @@ const CursosPage: React.FC = () => {
 
   const handleCategoryChange = (categorySlug: string) => {
     const params = new URLSearchParams(location.search);
-    
+
     if (categorySlug) {
       params.set('filter', categorySlug);
     } else {
       params.delete('filter');
     }
-    
+
     navigate({ search: params.toString() });
   };
 
   const filteredCourses = courses.filter(course => {
-    const matchesSearch = course.title.toLowerCase().includes(searchTerm.toLowerCase()) ;
-    const matchesCategory = selectedCategory ? 
+    const matchesSearch = course.title.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory ?
       toSlug(course.category) === toSlug(selectedCategory) : true; // Normalizar ambas categorías
     const matchesLevel = selectedLevel ? course.level === selectedLevel : true;
 
@@ -177,7 +177,7 @@ const CursosPage: React.FC = () => {
                 <p className="text-gray-600 dark:text-gray-400 mb-8">
                   Mostrando {filteredCourses.length} de {courses.length} cursos
                 </p>
-                
+
                 <motion.div
                   className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
                   variants={containerVariants}
@@ -190,7 +190,7 @@ const CursosPage: React.FC = () => {
                       variants={itemVariants}
                       whileHover="hover"
                     >
-                      <CourseCard course={course} />
+                      <CourseCard course={course as any} />
                     </motion.div>
                   ))}
                 </motion.div>

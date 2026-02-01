@@ -7,6 +7,7 @@ import DirectoradeProyectos from '../medios/team/Directoradeproyectos.jpeg';
 
 import MisionImage from '../medios/team/Mision.jpeg';
 import VisionImage from '../medios/team/Vision.jpeg';
+import CompanyCarousel from '../components/ui/CompanyCarousel';
 
 const NosotrosPage: React.FC = () => {
   // Animaciones
@@ -36,13 +37,10 @@ const NosotrosPage: React.FC = () => {
   ];
 
   const timeline = [
-    { year: "2019", title: "El origen de una idea", description: "Talenthree nació con la convicción de que el talento humano impulsa el desarrollo sostenible, ofreciendo soluciones que conectan el crecimiento profesional con los objetivos de las organizaciones." },
-
+    { year: "2019", title: "El origen de una idea", description: "TYX nació con la convicción de que el talento humano impulsa el desarrollo sostenible, ofreciendo soluciones que conectan el crecimiento profesional con los objetivos de las organizaciones." },
     { year: "2020", title: "Formación y primeros clientes", description: "Iniciamos con capacitaciones y asesorías para pymes, enfocadas en fortalecer sus capacidades internas y la gestión del talento." },
-
     { year: "2022", title: "Expansión de servicios", description: "Ampliamos nuestra propuesta con servicios de desarrollo organizacional, diagnóstico institucional, diseño de perfiles, líneas de carrera y fortalecimiento de cultura, aplicando metodologías ágiles y centradas en las personas." },
-    
-    { year: "2023", title: "Transformación digital y alianzas estratégicas", description: "Incorporamos herramientas tecnológicas a nuestra oferta formativa y de consultoría, fortaleciendo alianzas con instituciones y empresas que apuestan por un enfoque humano e innovador." }
+    { year: "2023", title: "Transformación digital y rebranding a TYX", description: "Incorporamos herramientas tecnológicas a nuestra oferta formativa y de consultoría, consolidando nuestra identidad como TYX para reflejar la evolución tecnológica y humana." }
   ];
 
   const team = [
@@ -54,163 +52,174 @@ const NosotrosPage: React.FC = () => {
   ];
 
   return (
-    <div className= "bg-white/90  dark:bg-gray-900">
+    <div className="bg-white/90  dark:bg-gray-900">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary-800 to-secondary-800 text-white py-20">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-secondary-900 text-white py-16 md:py-24 overflow-hidden">
+        {/* Background Overlay */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-grid-white/[0.03] bg-[length:30px_30px]"></div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-[100px]"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-500/20 rounded-full blur-[100px]"></div>
+        </div>
+
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="container mx-auto px-4 text-center"
+          className="container mx-auto px-4 text-center relative z-10"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Conoce nuestra historia<span className="text-secondary-200"></span>
+          <div className="inline-block px-3 py-1 mb-4 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
+            <span className="text-sm font-semibold text-primary-100 tracking-wide uppercase">Sobre Nosotros</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight">
+            Nuestra Historia y <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-300 to-primary-300">Propósito</span>
           </h1>
-          <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
-            Gestionamos el talento para potenciar el éxito de tu organización.
+          <p className="text-lg md:text-xl text-blue-50/90 max-w-2xl mx-auto leading-relaxed">
+            Gestionamos el talento para potenciar el éxito de tu organización, combinando experiencia humana con innovación tecnológica.
           </p>
         </motion.div>
       </section>
 
       {/* Acerca de Nosotros con fondo animado - Versión compacta */}
-{/* Acerca de Nosotros - Versión responsive compacta */}
-<section className="relative py-16 md:py-24 lg:py-28 flex items-center justify-center overflow-hidden">
-  {/* Fondo animado */}
-  <div className="absolute inset-0 z-0">
-    <div className="absolute inset-0 bg-gradient-to-r from-primary-500 via-secondary-400 to-accent-500 opacity-15 animate-gradient-flow"></div>
-    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-dark-900/80"></div>
-  </div>
+      {/* Acerca de Nosotros - Versión responsive compacta */}
+      <section className="relative py-16 md:py-24 lg:py-28 flex items-center justify-center overflow-hidden">
+        {/* Fondo animado */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-500 via-secondary-400 to-accent-500 opacity-15 animate-gradient-flow"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-dark-900/80"></div>
+        </div>
 
-  {/* Contenido centrado */}
-  <motion.div 
-    initial={{ opacity: 0, scale: 0.95 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.8 }}
-    className="relative z-2 text-center px-4 max-w-4xl mx-auto w-full"
-  >
-    <div className="mb-8 md:mb-10 lg:mb-12">
-      <h2 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6 dark:text-white">
-        Sobre <span className="text-primary-500">Talenthree</span>
-      </h2>
-      <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mx-auto max-w-3xl leading-relaxed">
-        En Talenthree, somos más que una organización educativa. Somos un ecosistema que impulsa el crecimiento de personas y empresas, a través de consultoría en talento humano, gestión organizacional, formación laboral y asesoría estratégica para Mypes.
-      </p>
-    </div>
-    
-    <div className="grid md:grid-cols-3 gap-6 md:gap-8 px-4">
-      <motion.div 
-        whileHover={{ y: -10 }}
-        className="bg-white/90 dark:bg-gray-800 p-5 md:p-6 rounded-xl backdrop-blur-sm"
-      >
-        <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">10,000+</h3>
-        <p className="text-gray-600 dark:text-gray-300">Profesionales capacitados</p>
-      </motion.div>
-      
-      <motion.div 
-        whileHover={{ y: -10 }}
-        className="bg-white/90 dark:bg-gray-800 p-5 md:p-6 rounded-xl backdrop-blur-sm"
-      >
-        <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">500+</h3>
-        <p className="text-gray-600 dark:text-gray-300">Empresas transformadas</p>
-      </motion.div>
-      
-      <motion.div 
-        whileHover={{ y: -10 }}
-        className="bg-white/90 dark:bg-gray-800 p-5 md:p-6 rounded-xl backdrop-blur-sm"
-      >
-        <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">98%</h3>
-        <p className="text-gray-600 dark:text-gray-300">Satisfacción de clientes</p>
-      </motion.div>
-    </div>
-  </motion.div>
-</section>
+        {/* Contenido centrado */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-2 text-center px-4 max-w-4xl mx-auto w-full"
+        >
+          <div className="mb-8 md:mb-10 lg:mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6 dark:text-white">
+              Sobre <span className="text-primary-500">TYX</span>
+            </h2>
+            <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mx-auto max-w-3xl leading-relaxed">
+              En TYX, somos un ecosistema que impulsa el crecimiento de personas y empresas a través de la evolución en la gestión del talento, formación profesional y asesoría estratégica.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 px-4">
+            <motion.div
+              whileHover={{ y: -10 }}
+              className="bg-white/90 dark:bg-gray-800 p-5 md:p-6 rounded-xl backdrop-blur-sm"
+            >
+              <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">10,000+</h3>
+              <p className="text-gray-600 dark:text-gray-300">Profesionales capacitados</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -10 }}
+              className="bg-white/90 dark:bg-gray-800 p-5 md:p-6 rounded-xl backdrop-blur-sm"
+            >
+              <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">500+</h3>
+              <p className="text-gray-600 dark:text-gray-300">Empresas transformadas</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -10 }}
+              className="bg-white/90 dark:bg-gray-800 p-5 md:p-6 rounded-xl backdrop-blur-sm"
+            >
+              <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">98%</h3>
+              <p className="text-gray-600 dark:text-gray-300">Satisfacción de clientes</p>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
 
       {/* Mission & Vision */}
-<section className="py-16 bg-white dark:bg-gray-900">
-  <div className="container mx-auto px-4">
-    {/* Sección Nuestra Historia con animación mejorada */}
-    <motion.div 
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true, margin: "-100px" }}
-      className="text-center my-24 py-8"
-    >
-      <motion.div 
-        whileHover={{ scale: 1.02 }}
-        transition={{ type: "spring", stiffness: 300 }}
-        className="inline-block"
-      >
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 dark:text-white">Nuestra Historia</h2>
-        <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-          De startup local a referente regional en educación tecnológica
-        </p>
-      </motion.div>
-    </motion.div>
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          {/* Sección Nuestra Historia con animación mejorada */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-center my-24 py-8"
+          >
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="inline-block"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 dark:text-white">Nuestra Historia</h2>
+              <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+                De startup local a referente regional en educación tecnológica
+              </p>
+            </motion.div>
+          </motion.div>
 
-    {/* Sección Misión (original) */}
-    <motion.div 
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      className="grid md:grid-cols-2 gap-12 items-center"
-    >
-      <motion.div variants={itemVariants} className="space-y-6">
-        <h2 className="text-3xl font-bold mb-6 dark:text-white">Nuestra Misión</h2>
-        <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">       
-          Impulsar el crecimiento y éxito de las personas y organizaciones mediante soluciones integrales de gestión del talento humano, desarrollo organizacional y formación profesional. Ofreciendo servicios de alta calidad, personalizados y orientados a resultados, que permitan a nuestros clientes alcanzar su máximo potencial y adaptarse.
-        </p>
-      </motion.div>
-      <motion.div variants={itemVariants}>
-        <img 
-  src={MisionImage}  // Usa la variable importada
-          alt="Equipo trabajando" 
-          className="rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
-        />
-      </motion.div>
-    </motion.div>
+          {/* Sección Misión (original) */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="grid md:grid-cols-2 gap-12 items-center"
+          >
+            <motion.div variants={itemVariants} className="space-y-6">
+              <h2 className="text-3xl font-bold mb-6 dark:text-white">Nuestra Misión</h2>
+              <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+                Impulsar el crecimiento y éxito de las personas y organizaciones mediante soluciones integrales de gestión del talento humano, desarrollo organizacional y formación profesional. Ofreciendo servicios de alta calidad, personalizados y orientados a resultados, que permitan a nuestros clientes alcanzar su máximo potencial y adaptarse.
+              </p>
+            </motion.div>
+            <motion.div variants={itemVariants}>
+              <img
+                src={MisionImage}  // Usa la variable importada
+                alt="Equipo trabajando"
+                className="rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
+              />
+            </motion.div>
+          </motion.div>
 
-    {/* Sección Visión (original) */}
-    <motion.div 
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      className="grid md:grid-cols-2 gap-12 items-center mt-20"
-    >
-      <motion.div variants={itemVariants} className="order-1 md:order-2 space-y-6">
-        <h2 className="text-3xl font-bold mb-6 dark:text-white">Nuestra Visión</h2>
-        <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-          Ser la plataforma educativa y consultora líder en gestión del talento y desarrollo
-          organizacional, reconocida por transformar empresas y profesionales.
-        </p>
-      </motion.div>
-      <motion.div variants={itemVariants} className="order-2 md:order-1">
-        <img 
-  src={VisionImage}  // Usa la variable importada
-          alt="Estudiantes colaborando" 
-          className="rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
-        />
-      </motion.div>
-    </motion.div>
-  </div>
-</section>
+          {/* Sección Visión (original) */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="grid md:grid-cols-2 gap-12 items-center mt-20"
+          >
+            <motion.div variants={itemVariants} className="order-1 md:order-2 space-y-6">
+              <h2 className="text-3xl font-bold mb-6 dark:text-white">Nuestra Visión</h2>
+              <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+                Ser la plataforma educativa y consultora líder en gestión del talento y desarrollo
+                organizacional, reconocida por transformar empresas y profesionales.
+              </p>
+            </motion.div>
+            <motion.div variants={itemVariants} className="order-2 md:order-1">
+              <img
+                src={VisionImage}  // Usa la variable importada
+                alt="Estudiantes colaborando"
+                className="rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
+              />
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
       {/* Our Story */}
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             className="relative border-l-2 border-primary-500 ml-6 md:ml-0 md:mx-auto md:max-w-3xl pl-8 pb-8"
           >
             {timeline.map((item, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 variants={itemVariants}
                 className="mb-12 relative"
@@ -230,25 +239,25 @@ const NosotrosPage: React.FC = () => {
       {/* Values */}
       <section className="py-16 bg-gray-50 dark:bg-gray-950">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <h2 className="text-3xl font-bold mb-6 dark:text-white">Nuestros Valores</h2>
             <p className="text-gray-700 dark:text-gray-300 text-lg">
-              Principios fundamentales que guían cada decisión y acción en TalentThree
+              Principios fundamentales que guían cada decisión y acción en TYX
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {values.map(({ icon: Icon, title, description }, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 variants={itemVariants}
                 className="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
@@ -266,12 +275,12 @@ const NosotrosPage: React.FC = () => {
         </div>
       </section>
 
-      
+
 
       {/* Team */}
       <section className="py-16 bg-gray-50 dark:bg-gray-950">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="text-center max-w-3xl mx-auto mb-16"
@@ -282,21 +291,21 @@ const NosotrosPage: React.FC = () => {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {team.map((member, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 variants={itemVariants}
                 className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
               >
-                <img 
-                  src={member.photo} 
-                  alt={member.name} 
+                <img
+                  src={member.photo}
+                  alt={member.name}
                   className="w-full h-80 object-cover"
                 />
                 <div className="p-6">
@@ -307,6 +316,16 @@ const NosotrosPage: React.FC = () => {
             ))}
           </motion.div>
         </div>
+      </section>
+      {/* Clientes */}
+      <section id="clientes" className="py-16 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+        <div className="container mx-auto px-4 text-center mb-10">
+          <h2 className="text-3xl font-bold mb-6 dark:text-white">Confían en <span className="text-primary-600">TYX</span></h2>
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Empresas líderes que han transformado su gestión del talento con nosotros.
+          </p>
+        </div>
+        <CompanyCarousel />
       </section>
     </div>
   );

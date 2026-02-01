@@ -81,8 +81,9 @@ export const courses = [
     image: Gestiondetiempo,
     duration: '70 minutos',
     students: 1700,
+    instructor: 'TYX Academy',
     modality: 'Virtual' as const,
-    level: '' as const,
+    level: '.' as const,
     category: 'Desarrollo Personal' as const
   },
   {
@@ -93,8 +94,9 @@ export const courses = [
     image: Manejodeestres,
     duration: '80 minutos',
     students: 1200,
+    instructor: 'TYX Academy',
     modality: 'Virtual' as const,
-    level: '' as const,
+    level: '.' as const,
     category: 'Desarrollo Personal' as const
   },
   {
@@ -117,8 +119,9 @@ export const courses = [
     image: Marcapersonal,
     duration: '75 minutos',
     students: 3500,
+    instructor: 'TYX Academy',
     modality: 'Virtual' as const,
-    level: '' as const,
+    level: '.' as const,
     category: 'Desarrollo Personal' as const
   },
   {
@@ -139,11 +142,11 @@ export const courses = [
     description: 'Gestiona oportunidades de negocios en el comercio exterior y conecta empresas con nuevos mercados alrededor del mundo…',
     image: ComercioInternacional,
     duration: '6 meses',
-  benefits: [
-    'Certificación internacional',
-    'Acceso a comunidad exclusiva',
-    'Mentorías personalizadas'
-  ],    level: '' as const,
+    benefits: [
+      'Certificación internacional',
+      'Acceso a comunidad exclusiva',
+      'Mentorías personalizadas'
+    ], level: '' as const,
     category: 'Formacion Laboral' as const
   },
   {
@@ -240,7 +243,7 @@ export const courses = [
     id: '20',
     title: 'Diplomado en Gestión Ambiental para Proyectos de Construcción',
     description: 'Este diplomado capacita a los profesionales en la identificación, evaluación y mitigación de impactos ambientales generados por proyectos de construcción. Se enfoca en la normativa ambiental vigente en Perú, elaboración de instrumentos de gestión ambiental (IGAs), planes de manejo ambiental, control de residuos y sostenibilidad en obras civiles. ',
-    image:  DiplomadoGestionAmbiental,
+    image: DiplomadoGestionAmbiental,
     duration: '5 meses',
     level: '' as const,
     category: 'Diplomados' as const
@@ -330,8 +333,8 @@ export const events = [
 export const instructors = [
   {
     id: '1',
-    name: 'Desarrollo Organizacional',
-    specialty: 'Asesoría y Consultoría',	
+    name: 'TYX Academy',
+    specialty: 'Asesoría y Consultoría',
     bio: 'Especialistas en transformación organizacional con más de 15 años de experiencia ayudando a empresas a optimizar sus procesos internos y potenciar el talento humano.',
     image: DesarrolloOrganizacional,
     social: {

@@ -62,7 +62,7 @@ const InstructoresPage: React.FC = () => {
           >
           </motion.div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Conoce a Nuestros Expertos<span className="text-secondary-400"></span>
+            Conoce Nuestros Servicios<span className="text-secondary-400"></span>
           </h1>
           <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
             Aprende de los mejores profesionales en la industria con experiencia práctica
@@ -102,7 +102,7 @@ const InstructoresPage: React.FC = () => {
                 onChange={(e) => setSpecialtyFilter(e.target.value)}
                 className="pl-4 pr-8 py-3 border border-gray-300 dark:border-gray-700 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-800 dark:text-white min-w-[200px] w-full"
               >
-                <option value="">Todas las especialidades</option>
+                <option value="">Todos los servicios</option>
                 {specialties.map((specialty, index) => (
                   <option key={index} value={specialty}>
                     {specialty}

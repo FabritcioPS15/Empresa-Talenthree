@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Moon, Sun, Laptop, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../../contexts/ThemeContext';
-import Logo from '../../medios/ttlogo.png';
+import Logo from '../../medios/tyx-logo.png';
 import '@fontsource/noto-sans/400.css';
 import '@fontsource/noto-sans/500.css';
 import '@fontsource/noto-sans/600.css';
@@ -18,21 +18,31 @@ const Header: React.FC = () => {
   const { theme, setTheme } = useTheme();
 
   const navLinks = [
-    { name: 'Inicio', path: '/' },
     { name: 'Nosotros', path: '/nosotros' },
     {
-      name: 'Educación continua',
-      path: '/cursos',
+      name: 'Asesoría y Consultoría',
+      path: '/otras-soluciones',
       subLinks: [
-        { name: 'Desarrollo Personal', path: '/cursos?filter=desarrollo-personal' },
-        { name: 'Formación Laboral', path: '/cursos?filter=formacion-laboral' },
-        { name: 'Formación Especializada', path: '/cursos?filter=talleres-diplomas' },
-        { name: 'Diplomados', path: '/cursos?filter=diplomados' },
+        { name: 'Desarrollo Organizacional', path: '/asesorias/desarrollo-organizacional' },
+        { name: 'Gestión Empresarial', path: '/asesorias/gestion-empresarial' },
+        { name: 'Gestión Pública', path: '/asesorias/gestion-publica' },
+        { name: 'Psicología Integral', path: '/asesorias/psicologia-integral' },
+        { name: 'Coaching', path: '/asesorias/coaching' },
+        { name: 'Outsourcing', path: '/asesorias/outsourcing' },
       ],
     },
-    { name: 'Asesoría y Consultoría', path: '/otras-soluciones' },
-    { name: 'Noticias y eventos', path: '/eventos' },
-    { name: 'Contáctanos', path: '/contacto' },
+    {
+      name: 'Recursos',
+      path: '/recursos',
+      subLinks: [
+        { name: 'Cursos', path: '/cursos' },
+        { name: 'Blog', path: '/blog' },
+        { name: 'Podcast', path: '/podcast' },
+        { name: 'Descargables', path: '/descargables' },
+        { name: 'YouTube', path: 'https://youtube.com/@talenthree-do' },
+      ],
+    },
+    { name: 'Nuestros clientes', path: '/nosotros#clientes' },
   ];
 
   useEffect(() => {
@@ -61,20 +71,19 @@ const Header: React.FC = () => {
     return location.search.includes(subPath.split('?filter=')[1]);
   };
 
-  const headerClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-    isScrolled 
-      ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg py-3 border-b border-gray-100 dark:border-gray-800' 
-      : 'bg-white/95 dark:bg-gray-900/95 py-4 border-b border-gray-100 dark:border-gray-800'
-  }`;
+  const headerClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+    ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg py-3 border-b border-gray-100 dark:border-gray-800'
+    : 'bg-white/95 dark:bg-gray-900/95 py-4 border-b border-gray-100 dark:border-gray-800'
+    }`;
 
   const logoVariants = {
     hidden: { opacity: 0, y: -20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { 
-        type: 'spring', 
-        stiffness: 300, 
+      transition: {
+        type: 'spring',
+        stiffness: 300,
         damping: 20,
         delay: 0.2
       }
@@ -95,18 +104,18 @@ const Header: React.FC = () => {
   };
 
   const mobileMenuVariants = {
-    open: { 
+    open: {
       opacity: 1,
       height: 'auto',
-      transition: { 
+      transition: {
         staggerChildren: 0.1,
         delayChildren: 0.2
       }
     },
-    closed: { 
+    closed: {
       opacity: 0,
       height: 0,
-      transition: { 
+      transition: {
         staggerChildren: 0.05,
         staggerDirection: -1,
         when: "afterChildren"
@@ -115,18 +124,18 @@ const Header: React.FC = () => {
   };
 
   const mobileItemVariants = {
-    open: { 
+    open: {
       opacity: 1,
       y: 0,
-      transition: { 
+      transition: {
         type: 'spring',
         stiffness: 300
       }
     },
-    closed: { 
+    closed: {
       opacity: 0,
       y: -20,
-      transition: { 
+      transition: {
         duration: 0.2
       }
     }
@@ -153,18 +162,18 @@ const Header: React.FC = () => {
   };
 
   const mobileSubItemVariants = {
-    open: { 
+    open: {
       opacity: 1,
       x: 0,
-      transition: { 
+      transition: {
         type: 'spring',
         stiffness: 300
       }
     },
-    closed: { 
+    closed: {
       opacity: 0,
       x: -10,
-      transition: { 
+      transition: {
         duration: 0.15
       }
     }
@@ -203,12 +212,12 @@ const Header: React.FC = () => {
           >
             <Link to="/" className="flex items-center">
               <div className="flex items-center text-primary-600 dark:text-primary-400">
-                <img 
+                <img
                   src={Logo}
-                  alt="Logo Talenthree" 
-                  className="h-8 w-8 object-contain -mt-2" 
+                  alt="Logo Talenthree"
+                  className="h-8 w-8 object-contain -mt-2"
                 />
-                <span className="ml-2 text-2xl font-bold tracking-tight">Talenthree</span>
+                <span className="ml-2 text-2xl font-bold tracking-tight">TYX</span>
               </div>
             </Link>
           </motion.div>
@@ -227,11 +236,10 @@ const Header: React.FC = () => {
                 <div className="flex items-center">
                   <Link
                     to={link.path}
-                    className={`relative px-4 py-3 text-base font-medium transition-colors flex items-center ${
-                      isActive(link.path)
-                        ? 'text-primary-700 dark:text-primary-400 font-semibold'
-                        : 'text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400'
-                    }`}
+                    className={`relative px-4 py-3 text-base font-medium transition-colors flex items-center ${isActive(link.path)
+                      ? 'text-primary-700 dark:text-primary-400 font-semibold'
+                      : 'text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400'
+                      }`}
                   >
                     {link.name}
                     {isActive(link.path) && (
@@ -260,11 +268,10 @@ const Header: React.FC = () => {
                         <Link
                           key={subLink.path}
                           to={subLink.path}
-                          className={`relative block px-4 py-2.5 text-sm transition-colors ${
-                            isSubActive(subLink.path)
-                              ? 'bg-primary-50 dark:bg-primary-900/30 text-white dark:text-primary-400 font-medium'
-                              : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'
-                          }`}
+                          className={`relative block px-4 py-2.5 text-sm transition-colors ${isSubActive(subLink.path)
+                            ? 'bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 font-medium'
+                            : 'text-gray-700 hover:bg-primary-50 hover:text-primary-600 dark:text-gray-300 dark:hover:bg-gray-700'
+                            }`}
                         >
                           {subLink.name}
                           {isSubActive(subLink.path) && (
@@ -286,7 +293,7 @@ const Header: React.FC = () => {
           {/* Right side items */}
           <div className="flex items-center space-x-4">
             {/* Theme Switcher - Desktop */}
-            <motion.div 
+            <motion.div
               className="relative theme-menu hidden lg:block"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -382,11 +389,10 @@ const Header: React.FC = () => {
                     <div className="flex items-center justify-between">
                       <Link
                         to={link.path}
-                        className={`relative flex-1 px-3 py-2.5 text-sm font-medium rounded-md transition-colors ${
-                          isActive(link.path)
-                            ? 'bg-primary-50 dark:bg-primary-900/20 text-white dark:text-primary-400'
-                            : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
-                        }`}
+                        className={`relative flex-1 px-3 py-2.5 text-sm font-medium rounded-md transition-colors ${isActive(link.path)
+                          ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-400'
+                          : 'text-gray-700 hover:bg-primary-50 hover:text-primary-600 dark:text-gray-300 dark:hover:bg-gray-800'
+                          }`}
                         onClick={() => !link.subLinks && setIsOpen(false)}
                       >
                         {link.name}
@@ -412,7 +418,7 @@ const Header: React.FC = () => {
                         </button>
                       )}
                     </div>
-                    
+
                     {/* Mobile Submenu */}
                     {link.subLinks && (
                       <AnimatePresence>
@@ -428,11 +434,10 @@ const Header: React.FC = () => {
                               <motion.div key={subLink.path} variants={mobileSubItemVariants}>
                                 <Link
                                   to={subLink.path}
-                                  className={`relative block px-3 py-2 text-sm rounded-md transition-colors ${
-                                    isSubActive(subLink.path)
-                                      ? 'bg-primary-50 dark:bg-primary-900/30 text-white dark:text-primary-400'
-                                      : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
-                                  }`}
+                                  className={`relative block px-3 py-2 text-sm rounded-md transition-colors ${isSubActive(subLink.path)
+                                    ? 'bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400'
+                                    : 'text-gray-700 hover:bg-primary-50 hover:text-primary-600 dark:text-gray-300 dark:hover:bg-gray-800'
+                                    }`}
                                   onClick={() => setIsOpen(false)}
                                 >
                                   {subLink.name}
@@ -464,33 +469,30 @@ const Header: React.FC = () => {
                 <div className="flex space-x-2">
                   <button
                     onClick={() => setTheme('light')}
-                    className={`flex items-center px-3 py-2 rounded-md text-sm transition-colors ${
-                      theme === 'light'
-                        ? 'bg-primary-50 dark:bg-primary-900/20 text-white dark:text-primary-400'
-                        : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
-                    }`}
+                    className={`flex items-center px-3 py-2 rounded-md text-sm transition-colors ${theme === 'light'
+                      ? 'bg-primary-50 dark:bg-primary-900/20 text-white dark:text-primary-400'
+                      : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
+                      }`}
                   >
                     <Sun size={16} className="mr-2" />
                     Claro
                   </button>
                   <button
                     onClick={() => setTheme('dark')}
-                    className={`flex items-center px-3 py-2 rounded-md text-sm transition-colors ${
-                      theme === 'dark'
-                        ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-400'
-                        : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
-                    }`}
+                    className={`flex items-center px-3 py-2 rounded-md text-sm transition-colors ${theme === 'dark'
+                      ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-400'
+                      : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
+                      }`}
                   >
                     <Moon size={16} className="mr-2" />
                     Oscuro
                   </button>
                   <button
                     onClick={() => setTheme('system')}
-                    className={`flex items-center px-3 py-2 rounded-md text-sm transition-colors ${
-                      theme === 'system'
-                        ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-400'
-                        : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
-                    }`}
+                    className={`flex items-center px-3 py-2 rounded-md text-sm transition-colors ${theme === 'system'
+                      ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-400'
+                      : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
+                      }`}
                   >
                     <Laptop size={16} className="mr-2" />
                     Sistema
